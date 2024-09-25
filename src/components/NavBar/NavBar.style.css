@@ -1,0 +1,21 @@
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 30px;
+}
+
+.navBar__mainLogo{
+    height: 90px;
+}
+
+.navBar__menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.navBar__menu_item{
+    padding: 5px 20px;
+    margin: 5px;
+}
