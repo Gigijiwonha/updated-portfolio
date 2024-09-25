@@ -1,8 +1,11 @@
 .mainSection{
-    position: relative;
+    position: absolute;
     background-color: var(--color-accent);
     margin: 0 20px;
     height: 60vh;
+    width: calc(100% - 40px);
+    top: 0;
+    z-index: 1;
 }
 
 .mainSection__contents{
@@ -19,9 +22,6 @@
     margin: 50px;
 }
 
-.mainSection__contents_right{
-    position: relative;
-}
 
 .mainSection__contents_right img{
     position: absolute;

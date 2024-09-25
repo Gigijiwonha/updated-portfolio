@@ -2,7 +2,7 @@ import React from 'react'
 import './NavBar.style.css'
 import mainLogo from "../../Assets/mainLogo.png"
 
-const navBar = () => {
+const NavBar = () => {
   return (
     <div className='navBar'>
       <img className='navBar__mainLogo' src={mainLogo} alt="main logo" />
@@ -16,4 +16,4 @@ const navBar = () => {
   )
 }
 
-export default navBar
+export default NavBar
