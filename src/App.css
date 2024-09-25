@@ -1,0 +1,14 @@
+/* Global CSS style */
+:root{
+   /* Application Colour */
+  --color-primary: var(--colour-white);
+  --color-accent: var(--colour-yellow);
+  --color-text: var(--colour-black);
+  --color-text-variant: var(--color-gray);
+
+   /* Colour */
+  --colour-white: #ffffff;
+  --colour-black: #000000;
+  --colour-gray: #4d4d4d;
+  --colour-yellow: #FCFF81;
+}
