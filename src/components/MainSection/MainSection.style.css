@@ -1,0 +1,42 @@
+.mainSection{
+    position: relative;
+    background-color: var(--color-accent);
+    margin: 0 20px;
+    height: 60vh;
+}
+
+.mainSection__contents{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mainSection__contents_left{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin: 50px;
+}
+
+.mainSection__contents_right{
+    position: relative;
+}
+
+.mainSection__contents_right img{
+    position: absolute;
+    top: -90px;
+    height: 300px;
+    animation: slide 1s ease-out;
+}
+
+@keyframes slide {
+    from{
+        right: -100px;
+        opacity: 0;
+    }
+    to{
+        right: 100px;
+        opacity: 1;
+    }
+}
