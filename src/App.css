@@ -14,3 +14,12 @@
   --colour-gray: #4d4d4d;
   --colour-yellow: #FCFF81;
 }
+
+body {
+  background-color: var(--color-accent);
+  overflow-x: hidden;
+}
+
+li{
+  list-style: none;
+}

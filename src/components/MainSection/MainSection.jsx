@@ -36,12 +36,12 @@ const MainSection = () => {
 
   return (
     <div className='mainSection'>
-        <div className='mainSection__contents'>
-            <div className='mainSection__contents_left'>
+        <div className='mainSection__container'>
+            <div className='mainSection__container_left'>
                 <h1>{greetingMessage}!</h1>
                 <p>The sun is shining bright, let's make the most of it!</p>
             </div>
-            <div className='mainSection__contents_right'>
+            <div className='mainSection__container_right'>
                 <img src={profileImage} alt="profile" />
             </div>
         </div>
