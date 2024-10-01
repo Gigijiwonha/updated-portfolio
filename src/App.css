@@ -3,20 +3,22 @@
 /* Global CSS style */
 :root{
    /* Application Colour */
-  --color-primary: var(--colour-white);
-  --color-accent: var(--colour-yellow);
-  --color-text: var(--colour-black);
-  --color-text-variant: var(--color-gray);
+  --colour-primary: var(--colour-white);
+  --colour-accent: var(--colour-yellow);
+  --colour-text: var(--colour-black);
+  --colour-text-variant: var(--colour-gray);
 
    /* Colour */
   --colour-white: #ffffff;
   --colour-black: #000000;
-  --colour-gray: #4d4d4d;
+  --colour-gray: #686868;
+  --colour-lightGray: #c0c0c0;
   --colour-yellow: #FCFF81;
+  --colour-green:#0DA200;
 }
 
 body {
-  background-color: var(--color-accent);
+  background-color: var(--colour-accent);
   overflow-x: hidden;
 }
 
