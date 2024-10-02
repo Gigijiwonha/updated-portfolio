@@ -2,7 +2,7 @@
   background-color: var(--colour-white);
   box-shadow: rgba(13, 38, 76, 0.19) 0px 9px 20px;
   margin: 120px 30px;
-  height: 60vh;
+  height: 65vh;
   z-index: 1;
   border-radius: 10px;
   border: 30px solid transparent;
@@ -30,15 +30,15 @@
   flex-direction: column;
   justify-content: left;
   margin: 50px 0;
-  margin-left: 70px;
+  margin-left: 50px;
 }
 
 .mainSection__container_left h1,
-.mainSection__container_left h2 {
+.mainSection__container_left h3 {
   margin: 0;
 }
 
-.mainSection__container_left h2 {
+.mainSection__container_left h3 {
   font-size: 30px;
   font-weight: 800;
   margin-bottom: 7px;
@@ -46,10 +46,10 @@
 }
 
 .mainSection__container_left h1 {
-  font-size: 50px;
-  font-weight: 900;
+  font-size: 40px;
+  font-weight: 700;
   color: var(--colour-accent);
-  -webkit-text-stroke: 1px var(--colour-black);
+  -webkit-text-stroke: .5px var(--colour-black);
   text-shadow: 1px 1px 0 var(--colour-gray), 2px 2px 0 var(--colour-gray),
     3px 3px 0 var(--colour-gray), 4px 4px 0 var(--colour-gray),
     5px 5px 0 var(--colour-gray), 6px 6px 0 var(--colour-gray),
@@ -90,12 +90,36 @@
 
 .mainSection__container_right img {
   position: absolute;
+  min-height: 80%;
   max-height: 100%;
   width: auto;
   animation: slide 1s ease-out forwards;
   top: 50%;
   left: 50%;
-  transform: translate(-65%, -65%);
+}
+
+.mainSection__container_right h1 {
+  position: absolute;
+  z-index: 15;
+  top: 52%;
+  right: 20%;
+  animation: slide 1s ease-out forwards;
+  font-size: 50px;
+  font-weight: 900;
+  color: var(--colour-accent);
+}
+
+.mainSection__container_right p {
+  position: absolute;
+  z-index: 10;
+  top: 65%;
+  right: -15%;
+  animation: slide 1s ease-out forwards;
+  background-color: var(--colour-accent);
+  font-size: 25px;
+  font-weight: 900;
+  padding: 10px 20px;
+  border-radius: 5px;
 }
 
 @keyframes slide {
@@ -104,7 +128,9 @@
     opacity: 0;
   }
   to {
-    transform: translate(-50%, -65%);
+    transform: translate(-50%, -77%);
     opacity: 1;
   }
 }
+
+
