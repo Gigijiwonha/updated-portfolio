@@ -42,7 +42,7 @@ const MainSection = () => {
 
   const generateRows = () => {
     const wordSize = 8;
-    const rowHeight = 10;
+    const rowHeight = 25;
     const rowLines = Math.floor((screenHeight * 2) / rowHeight);
     const rows = [];
     let currentLineWidth;
@@ -60,7 +60,7 @@ const MainSection = () => {
           return words[randomIndex];
         };
         const randomWord = getRandomWord(words); // a random word
-        const randomWordWidth = randomWord.length * wordSize; // size of random word
+        const randomWordWidth = randomWord.length * wordSize + 5; // size of random word plus spacing
 
         if (currentLineWidth + randomWordWidth <= screenWidth) {
           currentRow.push(randomWord);
