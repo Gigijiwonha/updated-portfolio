@@ -42,8 +42,8 @@ const MainSection = () => {
 
   const generateRows = () => {
     const wordSize = 8;
-    const rowHeight = 25;
-    const rowLines = Math.floor((screenHeight * 2) / rowHeight);
+    const rowHeight = 27.5;
+    const rowLines = Math.floor(screenHeight / rowHeight);
     const rows = [];
     let currentLineWidth;
     let currentRow;
