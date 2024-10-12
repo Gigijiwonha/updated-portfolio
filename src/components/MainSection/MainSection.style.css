@@ -24,10 +24,15 @@
   white-space: nowrap;
 }
 
+.fade {
+  opacity: 0; /* 투명도 0으로 설정 */
+  transition: opacity 0.5s ease; /* 부드러운 전환 효과 */
+}
+
 .mainSection {
   background-color: var(--colour-white);
   box-shadow: rgba(13, 38, 76, 0.19) 0px 9px 20px;
-  margin: 120px 30px;
+  margin: 950px 30px;
   height: 65vh;
   z-index: 1;
   border-radius: 10px;
@@ -157,4 +162,8 @@
     transform: translate(-50%, -77%);
     opacity: 1;
   }
+}
+
+.emptyBox {
+  height: 2000px;
 }

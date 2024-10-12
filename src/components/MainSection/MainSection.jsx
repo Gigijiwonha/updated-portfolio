@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./MainSection.style.css";
 import profileImage from "../../Assets/profileImage.png";
 
@@ -10,6 +10,8 @@ import profileImage from "../../Assets/profileImage.png";
 const MainSection = () => {
   const [greetingMessage, setGreetingMessage] = useState("");
   const [rows, setRows] = useState([]);
+  const [currentScrollY, setCurrentScrollY] = useState(0);
+  const mainSectionRef = useRef(null);
 
   const words = [
     "curious",
@@ -19,7 +21,7 @@ const MainSection = () => {
     "diligent",
     "tech-savvy",
     "creative",
-    "GIGI",
+    "gigi",
   ];
 
   let screenWidth = window.innerWidth;
@@ -77,6 +79,30 @@ const MainSection = () => {
     return rows;
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const getScrollY = window.scrollY;
+      setCurrentScrollY(getScrollY);
+    };
+    window.addEventListener("scroll", handleScroll);
+    fadingEffect();
+  }, [currentScrollY]);
+
+  console.log("current Y >>", currentScrollY);
+  const fadingWordEffect = (word) => {
+    const wordIndex = words.indexOf(word);
+    const scrollThreshold = (wordIndex + 1) * 100; // 각 단어별로 100px 단위로 페이드
+    return currentScrollY >= scrollThreshold ? "fade" : "";
+  };
+
+  const fadingEffect = () => {
+    if (currentScrollY < 800) {
+      mainSectionRef.current?.classList.add("fade");
+    } else {
+      mainSectionRef.current?.classList.remove("fade");
+    }
+  };
+
   const greetingMessageByHour = {
     morning: "Good Morning",
     afternoon: "Good Afternoon",
@@ -97,10 +123,10 @@ const MainSection = () => {
       setGreetingMessage(greetingMessageByHour.morning);
     } else if (currentHour < 18) {
       setGreetingMessage(greetingMessageByHour.afternoon);
-    } else if (currentHour < 11) {
+    } else if (currentHour < 21) {
       setGreetingMessage(greetingMessageByHour.evening);
     } else {
-      setGreetingMessage(greetingMessage.night);
+      setGreetingMessage(greetingMessageByHour.night);
     }
   };
 
@@ -119,7 +145,7 @@ const MainSection = () => {
             {row.map((word, wordIndex) => (
               <span
                 key={wordIndex}
-                className='word'
+                className={`word ${word} ${fadingWordEffect(word)}`}
               >
                 {word}
               </span>
@@ -127,7 +153,10 @@ const MainSection = () => {
           </div>
         ))}
       </div>
-      <div className='mainSection'>
+      <div
+        className='mainSection'
+        ref={mainSectionRef}
+      >
         <div className='mainSection__container'>
           <div className='mainSection__container_left'>
             <h3>{greetingMessage}</h3>
@@ -161,6 +190,7 @@ const MainSection = () => {
           </div>
         </div>
       </div>
+      <div className='emptyBox'></div>
     </div>
   );
 };
