@@ -1,33 +1,4 @@
-.words-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  /* height: 200vh; */
-  padding: 0;
-  margin: 0;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-}
 
-.word-row {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin: 4px 0;
-}
-
-.word {
-  font-size: 1rem;
-  white-space: nowrap;
-}
-
-.fade {
-  opacity: 0; /* 투명도 0으로 설정 */
-  transition: opacity 0.5s ease; /* 부드러운 전환 효과 */
-}
 
 .mainSection {
   background-color: var(--colour-white);
