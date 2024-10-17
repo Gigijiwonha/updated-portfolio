@@ -1,9 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
 import './HomeSection.style.css';
+import mainLogo from "../../Assets/mainLogo.png"
+import { useNavigate } from 'react-router-dom';
 
 const HomeSection = () => {
-    const [rows, setRows] = useState([]);
+  const [rows, setRows] = useState([]);
   const [currentScrollY, setCurrentScrollY] = useState(0);
+  const mainLogoRef = useRef(null);
+  const navigate = useNavigate();
 
   const words = [
     "curious",
@@ -77,7 +81,7 @@ const HomeSection = () => {
       setCurrentScrollY(getScrollY);
     };
     window.addEventListener("scroll", handleScroll);
-    // fadingEffect();
+    fadingEffect();
   }, [currentScrollY]);
 
   console.log("current Y >>", currentScrollY);
@@ -86,6 +90,19 @@ const HomeSection = () => {
     const scrollThreshold = (wordIndex + 1) * 100; // 각 단어별로 100px 단위로 페이드
     return currentScrollY >= scrollThreshold ? "fade" : "";
   };
+
+  const fadingEffect = () => {
+      if (currentScrollY < 820) {
+        mainLogoRef.current?.classList.add("fade");
+      } else {
+        mainLogoRef.current?.classList.remove("fade");
+      }
+    };
+
+  const goToMainPage = () => {
+    navigate('/main');
+  }
+
   return (
     <div>
       <div className='words-container'>
@@ -104,6 +121,11 @@ const HomeSection = () => {
             ))}
           </div>
         ))}
+      </div>
+      <div className='btn-container'>
+        <button onClick={goToMainPage}>
+          <img className='btn-container__mainLogo' src={mainLogo} alt="mainLogo-btn" ref={mainLogoRef}/>
+        </button>
       </div>
     </div>
   )
