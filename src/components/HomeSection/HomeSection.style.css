@@ -1,52 +1,65 @@
+.popup-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--colour-black);
+  color: var(--colour-accent);
+  padding: 0.5rem 2rem;
+  font-size: 2rem;
+  border-radius: 10px;
+  z-index: 10;
+}
+
 .words-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    /* height: 200vh; */
-    padding: 0;
-    margin: 0;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-  }
-  
-  .word-row {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin: 4px 0;
-  }
-  
-  .word {
-    font-size: 1rem;
-    white-space: nowrap;
-  }
-  
-  .fade {
-    opacity: 0; /* 투명도 0으로 설정 */
-    transition: opacity 0.3s ease; /* 부드러운 전환 효과 */
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* height: 200vh; */
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
 
-  .btn-container{
-    position: absolute;
-    top: 820px;
-    height: 100vh;
-    width: 100%;
-  }
+.word-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 4px 0;
+}
 
-  .btn-container button{
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-  }
+.word {
+  font-size: 1rem;
+  white-space: nowrap;
+}
 
-  .btn-container__mainLogo{
-    height: 17vh;
-    animation: float 3s ease-in-out infinite;
-  }
+.fade {
+  opacity: 0; /* 투명도 0으로 설정 */
+  transition: opacity 0.3s ease; /* 부드러운 전환 효과 */
+}
+
+.btn-container {
+  position: absolute;
+  top: 820px;
+  height: 100vh;
+  width: 100%;
+}
+
+.btn-container button {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.btn-container__mainLogo {
+  height: 17vh;
+  animation: float 3s ease-in-out infinite;
+}

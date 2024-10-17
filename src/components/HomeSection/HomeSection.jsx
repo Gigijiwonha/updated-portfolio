@@ -8,6 +8,8 @@ const HomeSection = () => {
   const [currentScrollY, setCurrentScrollY] = useState(0);
   const mainLogoRef = useRef(null);
   const navigate = useNavigate();
+  const [isVisible, setIsVisible] = useState(true);
+  const [fadeOut, setFadeOut] = useState(false);
 
   const words = [
     "curious",
@@ -103,8 +105,20 @@ const HomeSection = () => {
     navigate('/main');
   }
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setFadeOut(true);
+      setTimeout(() => {
+        setIsVisible(false);
+      }, 1000); 
+    }, 1500);
+
+    return () => clearTimeout(timer); 
+  }, []);
+
   return (
     <div>
+      {isVisible && (<span className={`popup-message ${fadeOut? 'fade' : ''}`}>Scroll Down!</span>)}
       <div className='words-container'>
         {rows.map((row, rowIndex) => (
           <div
