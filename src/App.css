@@ -1,28 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Chonburi&family=Fontdiner+Swanky&display=swap');
 
 /* Global CSS style */
-:root{
-   /* Application Colour */
+:root {
+  /* Application Colour */
   --colour-primary: var(--colour-white);
   --colour-accent: var(--colour-yellow);
   --colour-text: var(--colour-black);
   --colour-text-variant: var(--colour-gray);
 
-   /* Colour */
+  /* Colour */
   --colour-white: #ffffff;
   --colour-black: #000000;
+  --colour-dardGray: #414141;
   --colour-gray: #686868;
   --colour-lightGray: #c0c0c0;
-  --colour-yellow: #FCFF81;
-  --colour-green:#0DA200;
+  --colour-yellow: #fcff81;
+  --colour-green: #0da200;
+  --colour-beige: #E7E6DA;
+  --colour-red: #c73a07;
 }
 
 body {
-  background-color: var(--colour-accent);
-  overflow-x: hidden;
+  overscroll-behavior: none;
+  background-color: var(--colour-beige);
 }
 
-li{
+li {
   list-style: none;
 }

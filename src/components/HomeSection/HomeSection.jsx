@@ -1,25 +1,26 @@
 import React, { useEffect, useRef, useState } from "react";
-import './HomeSection.style.css';
-import mainLogo from "../../Assets/mainLogo.png"
-import { useNavigate } from 'react-router-dom';
+import "./HomeSection.style.css";
+import mainLogoRed from "../../Assets/mainLogoRed.png";
+import { useNavigate } from "react-router-dom";
 
 const HomeSection = () => {
   const [rows, setRows] = useState([]);
   const [currentScrollY, setCurrentScrollY] = useState(0);
   const mainLogoRef = useRef(null);
+  const btnContainerRef = useRef(null);
   const navigate = useNavigate();
   const [isVisible, setIsVisible] = useState(true);
   const [fadeOut, setFadeOut] = useState(false);
 
   const words = [
-    "curious",
-    "persistent",
-    "resposible",
-    "collaborative",
-    "diligent",
-    "tech-savvy",
-    "creative",
-    "gigi",
+    "Curious",
+    "Persistent",
+    "Resposible",
+    "Collaborative",
+    "Diligent",
+    "Tech-Savvy",
+    "Creative",
+    "GiGi",
   ];
 
   let screenWidth = window.innerWidth;
@@ -84,6 +85,7 @@ const HomeSection = () => {
     };
     window.addEventListener("scroll", handleScroll);
     fadingEffect();
+    changeBackgroundColour();
   }, [currentScrollY]);
 
   console.log("current Y >>", currentScrollY);
@@ -93,32 +95,60 @@ const HomeSection = () => {
     return currentScrollY >= scrollThreshold ? "fade" : "";
   };
 
+  const highlightingWord = (word) => {
+    const wordIndex = words.indexOf(word);
+    const scrollThreshold = wordIndex * 100; // 각 단어별로 100px 단위로 페이드
+    return currentScrollY >= scrollThreshold ? "red" : "";
+  }
+
   const fadingEffect = () => {
-      if (currentScrollY < 820) {
-        mainLogoRef.current?.classList.add("fade");
-      } else {
-        mainLogoRef.current?.classList.remove("fade");
-      }
-    };
+    if (currentScrollY < 820) {
+      mainLogoRef.current?.classList.add("fade");
+    } else {
+      mainLogoRef.current?.classList.remove("fade");
+    }
+  };
+
+  const changeBackgroundColour = () => {
+    if (currentScrollY < 820) {
+      btnContainerRef.current?.classList.remove("black");
+    } else {
+      btnContainerRef.current?.classList.add("black");
+    }
+  };
 
   const goToMainPage = () => {
-    navigate('/main');
-  }
+    navigate("/main");
+  };
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setFadeOut(true);
       setTimeout(() => {
         setIsVisible(false);
-      }, 1000); 
+      }, 1000);
     }, 1500);
 
-    return () => clearTimeout(timer); 
+    return () => clearTimeout(timer);
   }, []);
 
+  const [buttonText, setButtonText] = useState("Ready to dive in?");
+
+  const handleMouseEnter = () => {
+    setButtonText("Absolutely!");
+  };
+
+  const handleMouseLeave = () => {
+    setButtonText("Ready to dive in?");
+  };
+
   return (
-    <div>
-      {isVisible && (<span className={`popup-message ${fadeOut? 'fade' : ''}`}>Scroll Down!</span>)}
+    <div className='homeSection'>
+      {isVisible && (
+        <span className={`popup-message ${fadeOut ? "fade" : ""}`}>
+          Scroll Down!
+        </span>
+      )}
       <div className='words-container'>
         {rows.map((row, rowIndex) => (
           <div
@@ -128,7 +158,7 @@ const HomeSection = () => {
             {row.map((word, wordIndex) => (
               <span
                 key={wordIndex}
-                className={`word ${word} ${fadingWordEffect(word)}`}
+                className={`word ${fadingWordEffect(word)} ${highlightingWord(word)}`}
               >
                 {word}
               </span>
@@ -136,13 +166,24 @@ const HomeSection = () => {
           </div>
         ))}
       </div>
-      <div className='btn-container'>
-        <button onClick={goToMainPage}>
-          <img className='btn-container__mainLogo' src={mainLogo} alt="mainLogo-btn" ref={mainLogoRef}/>
+      <div
+        className='btn-container'
+        ref={btnContainerRef}
+      >
+        <button className='btn-container__logo' onClick={goToMainPage}>
+          <img
+            className='btn-container__mainLogoImg'
+            src={mainLogoRed}
+            alt='mainLogo-btn'
+            ref={mainLogoRef}
+            onClick={goToMainPage}
+          />
         </button>
+        <button className='btn-container__btn' onClick={goToMainPage} onMouseEnter={handleMouseEnter} // 마우스가 버튼 위로 올라올 때
+        onMouseLeave={handleMouseLeave}> {buttonText}</button>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default HomeSection
+export default HomeSection;
