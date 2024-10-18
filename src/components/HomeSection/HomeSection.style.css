@@ -47,12 +47,12 @@
 
 .fade-to-partial {
   opacity: 0.2;
-  transition: opacity 0.3s ease; 
+  transition: opacity 0.3s ease;
 }
 
 .fade-to-zero {
-  opacity: 0; 
-  transition: opacity 0.3s ease; 
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .red {
@@ -61,9 +61,16 @@
 }
 
 .bg-red {
-  background-color: var(--colour-red);
-  transition: background-color 0.8s ease-in-out;
+  background: rgb(199, 58, 7);
+  background: linear-gradient(
+    133deg,
+    rgba(199, 58, 7, 1) 21%,
+    rgba(215, 97, 54, 1) 100%
+  );
+  transition: all .8s ease;
+  opacity: 1;
 }
+
 
 .btn-container {
   position: absolute;
@@ -87,11 +94,12 @@
   opacity: 1;
 }
 
-.btn-container__btn{
+.btn-container__btn {
   position: relative;
-  border: 1px solid var(--colour-beige);
+  border: 2px solid var(--colour-beige);
   border-radius: 3rem;
-  background-color: transparent;
+  background: rgb(199,58,7);
+background: linear-gradient(324deg, rgba(199,58,7,1) 48%, rgba(215,97,54,1) 100%);
   margin-top: 1.5rem;
   padding: 1rem 0;
   width: 15rem;
@@ -102,34 +110,34 @@
   cursor: pointer;
   overflow: hidden;
   z-index: 1;
-  transition: all .3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 .btn-container__btn::after {
   content: "";
-  position: absolute; 
-  top: 0; 
-  left: 0; 
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 700%;
   width: 200%;
   background-color: var(--colour-beige);
-  transform: translate(-100%, -100%) rotate(45deg); 
-  transition: transform .5s ease-out; 
+  transform: translate(-100%, -100%) rotate(45deg);
+  transition: transform 0.5s ease-out;
   z-index: -1;
 }
 
 .btn-container__btn:hover::after {
-  transform: translate(-20%, -20%) rotate(45deg); 
+  transform: translate(-20%, -20%) rotate(45deg);
 }
 
-.btn-container__btn:hover{
+.btn-container__btn:hover {
   border: var(--colour-beige);
   color: var(--colour-dardGray);
   transform: translateY(-5px);
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.25);
 }
 
-.copyright{
+.copyright {
   position: absolute;
   bottom: 3%;
   width: 100%;
@@ -139,6 +147,6 @@
 }
 
 .copyright p {
-  font-size: .9rem;
+  font-size: 0.9rem;
   color: var(--colour-beige);
 }
