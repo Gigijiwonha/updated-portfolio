@@ -4,14 +4,18 @@
 
 .popup-message {
   position: absolute;
-  top: 50%;
+  top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: var(--colour-black);
-  color: var(--colour-accent);
+  background-color: var(--colour-red);
+  color: var(--colour-beige);
   padding: 0.5rem 2rem;
   font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
   z-index: 10;
+  border-radius: 3rem;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.25);
 }
 
 .words-container {
@@ -41,9 +45,14 @@
   white-space: nowrap;
 }
 
-.fade {
-  opacity: 0; /* 투명도 0으로 설정 */
-  transition: opacity 0.3s ease; /* 부드러운 전환 효과 */
+.fade-to-partial {
+  opacity: 0.2;
+  transition: opacity 0.3s ease; 
+}
+
+.fade-to-zero {
+  opacity: 0; 
+  transition: opacity 0.3s ease; 
 }
 
 .red {
@@ -51,7 +60,7 @@
   font-weight: 700;
 }
 
-.black {
+.bg-red {
   background-color: var(--colour-red);
   transition: background-color 0.8s ease-in-out;
 }
@@ -70,12 +79,12 @@
 .btn-container__logo {
   border: none;
   background-color: transparent;
-  cursor: pointer;
 }
 
 .btn-container__mainLogoImg {
   height: 23vh;
   animation: float 3s ease-in-out infinite;
+  opacity: 1;
 }
 
 .btn-container__btn{
@@ -93,31 +102,43 @@
   cursor: pointer;
   overflow: hidden;
   z-index: 1;
-  transition: all .5s ease-out;
+  transition: all .3s ease-out;
 }
 
 .btn-container__btn::after {
   content: "";
-  position: absolute; /* 절대 위치 설정 */
-  top: 0; /* 컨테이너의 최상단 */
-  left: 0; /* 컨테이너의 최좌측 */
-  height: 700%; /* 버튼 높이에 맞춰 */
-  width: 200%; /* 버튼 너비에 맞춰 */
-  background-color: var(--colour-beige); /* 배경색 설정 */
-  transform: translate(-100%, -100%) rotate(45deg); /* 대각선으로 위치 조정 */
-  transition: transform .5s ease-out; /* 애니메이션 효과 */
-  z-index: -1; /* 버튼 아래에 위치 */
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  height: 700%;
+  width: 200%;
+  background-color: var(--colour-beige);
+  transform: translate(-100%, -100%) rotate(45deg); 
+  transition: transform .5s ease-out; 
+  z-index: -1;
 }
 
 .btn-container__btn:hover::after {
-  transform: translate(-20%, -20%) rotate(45deg); /* 호버 시 버튼 안쪽으로 이동 */
+  transform: translate(-20%, -20%) rotate(45deg); 
 }
 
 .btn-container__btn:hover{
   border: var(--colour-beige);
   color: var(--colour-dardGray);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.25);
 }
 
-.btn-container__mainLogo:hover + .btn-container {
-  opacity: 1;
+.copyright{
+  position: absolute;
+  bottom: 3%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyright p {
+  font-size: .9rem;
+  color: var(--colour-beige);
 }

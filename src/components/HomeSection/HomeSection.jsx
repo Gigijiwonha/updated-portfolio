@@ -6,11 +6,16 @@ import { useNavigate } from "react-router-dom";
 const HomeSection = () => {
   const [rows, setRows] = useState([]);
   const [currentScrollY, setCurrentScrollY] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
+  const [fadeOut, setFadeOut] = useState(false);
   const mainLogoRef = useRef(null);
   const btnContainerRef = useRef(null);
   const navigate = useNavigate();
-  const [isVisible, setIsVisible] = useState(true);
-  const [fadeOut, setFadeOut] = useState(false);
+
+  // Always it starts from the top
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const words = [
     "Curious",
@@ -84,36 +89,30 @@ const HomeSection = () => {
       setCurrentScrollY(getScrollY);
     };
     window.addEventListener("scroll", handleScroll);
-    fadingEffect();
     changeBackgroundColour();
   }, [currentScrollY]);
 
   console.log("current Y >>", currentScrollY);
+
   const fadingWordEffect = (word) => {
     const wordIndex = words.indexOf(word);
-    const scrollThreshold = (wordIndex + 1) * 100; // 각 단어별로 100px 단위로 페이드
-    return currentScrollY >= scrollThreshold ? "fade" : "";
+    const scrollThreshold = (wordIndex + 1) * 100; // Fading effect for every 100 pixels of scrolling
+    return currentScrollY >= scrollThreshold ? "fade-to-partial " : "";
   };
 
   const highlightingWord = (word) => {
     const wordIndex = words.indexOf(word);
-    const scrollThreshold = wordIndex * 100; // 각 단어별로 100px 단위로 페이드
+    const scrollThreshold = wordIndex * 100; //// Changing the font colour for every 100 pixels of scrolling
     return currentScrollY >= scrollThreshold ? "red" : "";
-  }
-
-  const fadingEffect = () => {
-    if (currentScrollY < 820) {
-      mainLogoRef.current?.classList.add("fade");
-    } else {
-      mainLogoRef.current?.classList.remove("fade");
-    }
   };
 
   const changeBackgroundColour = () => {
     if (currentScrollY < 820) {
-      btnContainerRef.current?.classList.remove("black");
+      btnContainerRef.current?.classList.remove("bg-red");
+      btnContainerRef.current?.classList.add("fade-to-zero");
     } else {
-      btnContainerRef.current?.classList.add("black");
+      btnContainerRef.current?.classList.add("bg-red");
+      btnContainerRef.current?.classList.remove("fade-to-zero");
     }
   };
 
@@ -123,11 +122,14 @@ const HomeSection = () => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
+      // After 2 seconds, set fadeOut to true
       setFadeOut(true);
+      // Set another timer for 1 second, set isVisible to false
       setTimeout(() => {
         setIsVisible(false);
       }, 1000);
-    }, 1500);
+    }, 2000);
+    //After 3 seconds, the message will disappear from the DOM
 
     return () => clearTimeout(timer);
   }, []);
@@ -145,8 +147,8 @@ const HomeSection = () => {
   return (
     <div className='homeSection'>
       {isVisible && (
-        <span className={`popup-message ${fadeOut ? "fade" : ""}`}>
-          Scroll Down!
+        <span className={`popup-message ${fadeOut ? "fade-to-zero" : ""}`}>
+          Scroll Down 👇🏼
         </span>
       )}
       <div className='words-container'>
@@ -158,7 +160,9 @@ const HomeSection = () => {
             {row.map((word, wordIndex) => (
               <span
                 key={wordIndex}
-                className={`word ${fadingWordEffect(word)} ${highlightingWord(word)}`}
+                className={`word ${fadingWordEffect(word)} ${highlightingWord(
+                  word
+                )}`}
               >
                 {word}
               </span>
@@ -170,17 +174,28 @@ const HomeSection = () => {
         className='btn-container'
         ref={btnContainerRef}
       >
-        <button className='btn-container__logo' onClick={goToMainPage}>
+        <button
+          className='btn-container__logo'
+          onClick={goToMainPage}
+        >
           <img
             className='btn-container__mainLogoImg'
             src={mainLogoRed}
             alt='mainLogo-btn'
             ref={mainLogoRef}
-            onClick={goToMainPage}
           />
         </button>
-        <button className='btn-container__btn' onClick={goToMainPage} onMouseEnter={handleMouseEnter} // 마우스가 버튼 위로 올라올 때
-        onMouseLeave={handleMouseLeave}> {buttonText}</button>
+        <button
+          className='btn-container__btn'
+          onClick={goToMainPage}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
+          {buttonText}
+        </button>
+        <div className='copyright'>
+          <p>© 2024 Gigi Jiwon Ha Portfolio. All rights reserved.</p>
+        </div>
       </div>
     </div>
   );
