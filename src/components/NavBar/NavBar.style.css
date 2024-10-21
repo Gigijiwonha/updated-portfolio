@@ -72,3 +72,10 @@
     font-weight: 600;
     cursor: pointer;
 }
+
+.hamburger-bar{
+    border: none;
+    font-size: 1.8rem;
+    background-color: transparent;
+    color: var(--colour-darkGray);
+}
