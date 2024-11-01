@@ -1,44 +1,36 @@
 import React from "react";
 import "./AboutMe.style.css";
-import profileImage from "../../Assets/profileImage.png"
+import profileImage from "../../Assets/profileImage.png";
 
 const AboutMe = () => {
   return (
     <div className='aboutMeSection'>
-      <div
-        className='aboutMe'
-      >
-        <div className='aboutMe__container'>
-          <div className='mainSection__container_left'>
-            <h3></h3>
-            <h1>
-              const todayGrowingPains = () =&gt; &#123; return &apos;growing 1%
-              stronger&apos;; &#125;
-            </h1>
-            <p>
-              This code represents efficient performance like O(1) in Big O
-              notation. Daily growing pains lead to a 1% growth, allowing for
-              steady progress. When looking at the long term, I aim for
-              consistent and stable growth. Just like O(1), which maintains its
-              performance regardless of input size, I strive to develop
-              consistently in a changing environment. Even with new technologies
-              emerging every day, I avoid being overconfident and focus on
-              learning continuously to grow efficiently. I always aim to produce
-              reliable results, becoming a solid developer through sincere and
-              deep approaches.
-            </p>
+      <h2 className='aboutMe__title sectionTitle'>About Me</h2>
+      <div className='aboutMe__content'>
+        <div className='aboutMe__content__left'>
+          <div className='aboutMe__content__name'>
+            <h1>GiGi</h1>
+            <h2>Jiwon Ha</h2>
           </div>
-          <div className='mainSection__container_right'>
-            <img
-              className='mainSection__container_profileImg'
-              src={profileImage}
-              alt='profile'
-            />
-            <div className='mainSection__container_profile'>
-              <h1>GiGi Jiwon Ha</h1>
-              <p>Design-Tech Lover</p>
-            </div>
+          <img
+            className='aboutMe__content__img'
+            src={profileImage}
+            alt='profile image'
+          />
+        </div>
+        <div className='aboutMe__content__right'>
+          <div className='aboutMe__content__title'>
+            <h3>Front-End Developer </h3>
+            <h3>+</h3>
+            <h3>UI/UX Design Expertise </h3>
           </div>
+          <p className='aboutMe__content__description'>
+            With my background in UX/UI design, I'm excited to move into
+            front-end development. This combination of skills allows me to
+            approach problems from a unique perspective, setting me apart from
+            other developers. I aim to weave design principles into my coding to
+            create a smooth and enjoyable user experience.
+          </p>
         </div>
       </div>
     </div>

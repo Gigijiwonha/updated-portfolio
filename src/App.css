@@ -25,8 +25,15 @@
 body {
   overscroll-behavior: none;
   background-color: var(--colour-beige);
+  font-family: "Montserrat", sans-serif;
 }
 
 li {
   list-style: none;
+}
+
+.sectionTitle{
+  text-align: center;
+  font-weight: 800;
+  font-size: 1.7rem;
 }

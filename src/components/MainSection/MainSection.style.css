@@ -14,7 +14,8 @@
   font-family: "Montserrat", sans-serif;
 }
 
-.mainSection__container h2, h1{
+.mainSection__container h2,
+.mainSection__container h1{
   font-family: "Montserrat", sans-serif;
   font-weight: 800;
   color: var(--colour-red);
@@ -79,7 +80,7 @@
   border-radius: .5rem;
   display: block;
   margin-top: .9rem;
-  animation: loading 30s ease infinite;
+  animation: loading 20s ease infinite;
   opacity: .7;
 }
 
