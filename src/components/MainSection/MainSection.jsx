@@ -12,7 +12,6 @@ const MainSection = () => {
     morning: "Good Morning",
     afternoon: "Good Afternoon",
     evening: "Good Evening",
-    night: "Good Night",
   };
 
   const updateGreetingMessage = () => {
@@ -28,10 +27,8 @@ const MainSection = () => {
       setGreetingMessage(greetingMessageByHour.morning);
     } else if (currentHour < 18) {
       setGreetingMessage(greetingMessageByHour.afternoon);
-    } else if (currentHour < 21) {
-      setGreetingMessage(greetingMessageByHour.evening);
     } else {
-      setGreetingMessage(greetingMessageByHour.night);
+      setGreetingMessage(greetingMessageByHour.evening);
     }
   };
 
