@@ -19,6 +19,40 @@ const Skills = () => {
       </div>
       <div className='skillsSection'>
         <h2 className='skills__title sectionTitle'>Skills</h2>
+        <p>
+          I mainly use HTML, CSS and Java Script for building website,
+          additionally I had some experience using Swift and Jave at Uni
+        </p>
+        <div className='skills__container'>
+          <h3>Language</h3>
+          <div className='skills__box language'>
+            <ul className='skills__box_items'>
+              <li>HTML 5</li>
+              <li>CSS 6</li>
+              <li>Java Script</li>
+              <li>Swift</li>
+              <li>Java</li>
+            </ul>
+          </div>
+          <h3>Library</h3>
+          <div className='skills__box library'>
+            <ul className='skills__box_items'>
+              <li>React</li>
+              <li>React Query</li>
+              <li>Redux</li>
+              <li>Midleware Thunk</li>
+              <li>Axios</li>
+            </ul>
+          </div>
+          <h3>Tools</h3>
+          <div className='skills__box tool'>
+            <ul className='skills__box_items'>
+              <li>VS Code</li>
+              <li>Git</li>
+              <li>Figma</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   );
