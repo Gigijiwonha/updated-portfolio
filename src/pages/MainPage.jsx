@@ -2,8 +2,7 @@ import React from "react";
 import NavBar from '../components/NavBar/NavBar';
 import MainSection from '../components/MainSection/MainSection';
 import AboutMe from '../components/AboutMe/AboutMe';
-import Skills from '../components/Skills/Skills';
-import Projects from '../components/Projects/Projects';
+import SkillsProjects from '../components/SkillsProjects/SkillsProjects';
 import Contact from '../components/Contact/Contact';
 
 const MainPage = () => {
@@ -12,8 +11,7 @@ const MainPage = () => {
       <NavBar />
       <MainSection />
       <AboutMe />
-      <Skills />
-      <Projects />
+      <SkillsProjects />
       <Contact />
     </div>
   );

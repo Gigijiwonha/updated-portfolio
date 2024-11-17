@@ -1,3 +1,8 @@
+.skillsAndProjectsContainer{
+    position: relative;
+    height: 22  0vh;
+}
+
 .custom-shape-divider-top-1730634535 {
   position: relative;
   top: 0;
@@ -20,7 +25,8 @@
 }
 
 .skillsSection {
-  position: relative;
+  position: sticky;
+  top: 0;
   height: 100vh;
   box-sizing: border-box;
   padding: 100px 0;
@@ -28,6 +34,7 @@
   flex-direction: column;
   align-items: center;
 }
+
 
 .skillsSection p{
     max-width: 70vw;
@@ -75,4 +82,20 @@
 
 .skills__box_items li{
     color: var(--colour-beige);
+}
+
+.ProjectsSection {
+    position: sticky;
+    top: 0;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 100px 0;
+  background: rgb(199, 58, 7);
+  background: linear-gradient(
+    133deg,
+    rgba(199, 58, 7, 1) 21%,
+    rgba(215, 97, 54, 1) 100%
+  );
+  z-index: 5;
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.25);
 }
