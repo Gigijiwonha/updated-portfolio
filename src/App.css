@@ -22,6 +22,10 @@
   --colour-red: #c73a07;
 }
 
+*{
+  box-sizing: border-box;
+}
+
 body {
   overscroll-behavior: none;
   background-color: var(--colour-beige);

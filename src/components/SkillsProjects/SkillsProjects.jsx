@@ -1,5 +1,13 @@
 import React from "react";
 import "./SkillsProjects.style.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faHtml5,
+  faCss3Alt,
+  faJs,
+  faSwift,
+  faJava,
+} from "@fortawesome/free-brands-svg-icons";
 
 const Skills = () => {
   return (
@@ -23,20 +31,58 @@ const Skills = () => {
           I mainly use HTML, CSS and Java Script for building website,
           additionally I had some experience using Swift and Jave at Uni
         </p>
-        <div className='skills__container'>
-          <h3>Language</h3>
-          <div className='skills__box language'>
-            <ul className='skills__box_items'>
-              <li>HTML 5</li>
-              <li>CSS 6</li>
-              <li>Java Script</li>
-              <li>Swift</li>
-              <li>Java</li>
-            </ul>
+        <div className='skills__gridContainer'>
+          <div className='skills__language girdBox'>
+            <h3>💻 Language</h3>
+            <div className='gridBox__item'>
+              <h4>Proficient In</h4>
+              <ul className='gridBox__item__list--icon'>
+                <li>
+                  <FontAwesomeIcon
+                    icon={faHtml5}
+                    className='liIcon'
+                  />
+                  HTML 5
+                </li>
+                <li>
+                  <FontAwesomeIcon
+                    icon={faCss3Alt}
+                    className='liIcon'
+                  />
+                  CSS 6
+                </li>
+                <li>
+                  <FontAwesomeIcon
+                    icon={faJs}
+                    className='liIcon'
+                  />
+                  Java Script
+                </li>
+              </ul>
+            </div>
+            <div className='gridBox__item'>
+              <h4>Familiar With</h4>
+              <ul className='gridBox__item__list--icon'>
+                <li>
+                  <FontAwesomeIcon
+                    icon={faSwift}
+                    className='liIcon'
+                  />
+                  Swift
+                </li>
+                <li>
+                  <FontAwesomeIcon
+                    icon={faJava}
+                    className='liIcon'
+                  />
+                  Java
+                </li>
+              </ul>
+            </div>
           </div>
-          <h3>Library</h3>
-          <div className='skills__box library'>
-            <ul className='skills__box_items'>
+          <div className='skills__library girdBox'>
+            <h3>📚 Library</h3>
+            <ul className='gridBox__item__list--colomn'>
               <li>React</li>
               <li>React Query</li>
               <li>Redux</li>
@@ -44,9 +90,10 @@ const Skills = () => {
               <li>Axios</li>
             </ul>
           </div>
-          <h3>Tools</h3>
-          <div className='skills__box tool'>
-            <ul className='skills__box_items'>
+          <div className='skills__tool girdBox'>
+            <h3>⚙️ Tools</h3>
+
+            <ul className='gridBox__item__list'>
               <li>VS Code</li>
               <li>Git</li>
               <li>Figma</li>
@@ -54,14 +101,9 @@ const Skills = () => {
           </div>
         </div>
       </div>
-
-      {/* <div class="custom-shape-divider-top-1730692114">
-    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M649.97 0L599.91 54.12 550.03 0 0 0 0 120 1200 120 1200 0 649.97 0z" class="shape-fill"></path>
-    </svg>
-</div> */}
       <div className='ProjectsSection'>
-
+      <h2 className='projects__title sectionTitle'>Projects</h2>
+      
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
-.skillsAndProjectsContainer{
-    position: relative;
-    height: 22  0vh;
+.skillsAndProjectsContainer {
+  position: relative;
+  height: 22 0vh;
 }
 
 .custom-shape-divider-top-1730634535 {
@@ -27,7 +27,7 @@
 .skillsSection {
   position: sticky;
   top: 0;
-  height: 100vh;
+  height: 120vh;
   box-sizing: border-box;
   padding: 100px 0;
   display: flex;
@@ -35,59 +35,129 @@
   align-items: center;
 }
 
-
-.skillsSection p{
-    max-width: 70vw;
+.skillsSection p {
+  max-width: 70vw;
 }
+
 .skills__title {
   color: var(--colour-red);
 }
 
-.skills__container {
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  justify-content: center;
+.skills__gridContainer {
+  display: grid;
+  grid-template-columns: 6fr 4fr;
+  grid-template-rows: 2fr 1fr;
+  gap: 1rem;
   margin-top: 2rem;
+  max-height: 55vh;
+  max-width: 70vw;
+  box-sizing: border-box; /* 컨테이너도 포함 */
 }
 
-.skills__container h3{
-    margin: 0;
-    margin-bottom: 1rem;
-    margin-left: .5rem;
-}
-
-.skills__box {
-  width: 70vw;
-  height: 5rem;
-  background: rgb(199, 58, 7);
-  background: linear-gradient(
-    133deg,
-    rgba(199, 58, 7, 1) 21%,
-    rgba(215, 97, 54, 1) 100%
-  );
+.girdBox {
   border-radius: 1rem;
+  box-sizing: border-box; 
+  padding: 1.3rem;
+  overflow: hidden; 
+  overflow-wrap: break-word;
   box-shadow: 0 5px 7px rgba(0, 0, 0, 0.25);
-  display: flex;
-  align-items: center;
-  margin-bottom: 1rem;
 }
 
-.skills__box_items {
+.skills__language {
+  grid-row: span 2;
+  background-color:  #c73a07;
+}
+
+.skills__library {
+  background-color: rgba(215, 97, 54, 1);
+}
+
+.skills__tool {
+  background-color:  #dc8b6e;
+}
+
+.girdBox h3 {
+  margin: 0;
+  color: var(--colour-beige);
+  font-size: 1.3rem;
+}
+
+.gridBox__item {
+  margin: 1.5rem 3rem;
+}
+
+.gridBox__item h4 {
+  margin: 0;
+  margin-top: 2rem;
+  color: var(--colour-beige);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.gridBox__item__list--icon {
   display: flex;
-  gap: 20px;
+  gap: 40px;
   justify-content: left;
   align-items: center;
+  padding: 0;
+  margin-left: 1rem;
 }
 
-.skills__box_items li{
-    color: var(--colour-beige);
+.gridBox__item__list--icon li {
+  color: var(--colour-beige);
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.liIcon{
+  font-size: 4rem;
+  opacity: 0.6;
+  margin-bottom: 5px;
+}
+
+.gridBox__item__list--colomn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 0;
+  margin-left: 2rem;
+}
+
+.gridBox__item__list--colomn li {
+  list-style-type: circle;
+  margin: 0;
+  color: var(--colour-beige);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.gridBox__item__list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0;
+  gap: 30px;
+  margin-left: 2rem;
+}
+
+.gridBox__item__list li {
+  list-style-type: circle;
+  margin: 0;
+  color: var(--colour-beige);
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 .ProjectsSection {
-    position: sticky;
-    top: 0;
-  height: 100vh;
+  position: sticky;
+  top: 0;
+  height: 110vh;
   box-sizing: border-box;
   padding: 100px 0;
   background: rgb(199, 58, 7);
@@ -98,4 +168,8 @@
   );
   z-index: 5;
   box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.25);
+}
+
+.projects__title {
+  color: var(--colour-beige);
 }
