@@ -102,8 +102,31 @@ const Skills = () => {
         </div>
       </div>
       <div className='ProjectsSection'>
-      <h2 className='projects__title sectionTitle'>Projects</h2>
-      
+        <h2 className='projects__title sectionTitle'>Projects</h2>
+
+        <ul className='projects__sortingContainer'>
+          <li>All</li>
+          <li>Java Script</li>
+          <li>Swift</li>
+        </ul>
+
+        <ul className='projects__cardContainer'>
+          <li>
+          <button onClick={() => window.location.href = "https://nutflix-demo-by-gigi.netlify.app"}>Go to Nutflix</button>
+          </li>
+          <li>
+            <button></button>
+          </li>
+          <li>
+            <button></button>
+          </li>
+          <li>
+            <button></button>
+          </li>
+          <li>
+            <button></button>
+          </li>
+        </ul>
       </div>
     </div>
   );

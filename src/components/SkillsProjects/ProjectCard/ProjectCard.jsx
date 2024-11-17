@@ -1,8 +1,9 @@
 import React from 'react'
+import './ProjectCard.style.css'
 
 const ProjectCard = () => {
   return (
-    <div>
+    <div className='projectCard'>
       
     </div>
   )
