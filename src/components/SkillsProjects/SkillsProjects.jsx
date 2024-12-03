@@ -8,8 +8,60 @@ import {
   faSwift,
   faJava,
 } from "@fortawesome/free-brands-svg-icons";
+import netflixDemo from "../../Assets/netflixDemo.png";
+import retailShop from "../../Assets/retailShop.png";
+import goToList from "../../Assets/goToList.png";
+import spotifyDemo from "../../Assets/spotifyDemo.png";
+import groceryShop from "../../Assets/groceryShop.png";
+import weatherApp from "../../Assets/weatherApp.png";
+import ProjectCard from "./ProjectCard/ProjectCard";
 
 const Skills = () => {
+  const projects = [
+    {
+      url: "https://www.linkedin.com/feed/update/urn:li:activity:7249378011748151296/",
+      img: spotifyDemo,
+      title: "Spotify-Demo",
+      description: "Using TMBd API to display data",
+      tools: ["JS", "React", "React Query", "Axios"],
+    },
+    {
+      url: "https://nutflix-demo-by-gigi.netlify.app",
+      img: netflixDemo,
+      title: "Netflix-Demo",
+      description: "Using TMBd API to display data",
+      tools: ["JS", "React", "React Query", "Axios"],
+    },
+    {
+      url: "https://online-retail-store-by-gigi.netlify.app",
+      img: retailShop,
+      title: "Online Retail Shop",
+      description: "Using JSON Server to display data",
+      tools: ["JS", "React", "JSON Server"],
+    },
+    {
+      url: "https://grocery-shopping-website-by-gigi.netlify.app",
+      img: groceryShop,
+      title: "Online Grocery Shop",
+      description: "Using TMBd API to display data",
+      tools: ["JS", "React", "React Query", "Axios"],
+    },
+    {
+      url: "https://go-to-list-by-gigi.netlify.app",
+      img: goToList,
+      title: "Create Your Go-To List",
+      description: "Using Bootstrap and Redux to create a small application",
+      tools: ["JS", "React", "Bootstrap", "Redux"],
+    },
+    {
+      url: "https://weather-app-by-gigi.netlify.app",
+      img: weatherApp,
+      title: "Weather Application",
+      description: "Using TMBd API to display data",
+      tools: ["JS", "React", "React Query", "Axios"],
+    },
+  ];
+
   return (
     <div className='skillsAndProjectsContainer'>
       <div class='custom-shape-divider-top-1730634535'>
@@ -103,29 +155,18 @@ const Skills = () => {
       </div>
       <div className='ProjectsSection'>
         <h2 className='projects__title sectionTitle'>Projects</h2>
-
-        <ul className='projects__sortingContainer'>
-          <li>All</li>
-          <li>Java Script</li>
-          <li>Swift</li>
-        </ul>
-
-        <ul className='projects__cardContainer'>
-          <li>
-          <button onClick={() => window.location.href = "https://nutflix-demo-by-gigi.netlify.app"}>Go to Nutflix</button>
-          </li>
-          <li>
-            <button></button>
-          </li>
-          <li>
-            <button></button>
-          </li>
-          <li>
-            <button></button>
-          </li>
-          <li>
-            <button></button>
-          </li>
+        <p></p>
+        <ul className='projects__list'>
+          {projects.map((project, index) => (
+            <ProjectCard
+              key={index}
+              url={project.url}
+              img={project.img}
+              title={project.title}
+              description={project.description}
+              tools={project.tools}
+            />
+          ))}
         </ul>
       </div>
     </div>
