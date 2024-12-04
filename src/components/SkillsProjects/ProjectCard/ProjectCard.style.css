@@ -4,6 +4,7 @@
   justify-content: flex-start;
   gap: 20px;
   margin: 2rem 3rem;
+  z-index: 2;
 }
 
 .projects__list-item {
