@@ -157,15 +157,16 @@
 .ProjectsSection {
   position: sticky;
   top: 0;
-  height: 110vh;
+  height: 130vh;
   box-sizing: border-box;
   padding: 100px 0;
-  background: rgb(199, 58, 7);
+  /* background: rgb(199, 58, 7);
   background: linear-gradient(
     133deg,
     rgba(199, 58, 7, 1) 21%,
     rgba(215, 97, 54, 1) 100%
-  );
+  ); */
+  background-color: black;
   z-index: 5;
   box-shadow: 0 -10px 12px rgba(0, 0, 0, 0.2);
   display: flex;
@@ -173,8 +174,27 @@
   align-items: center;
 }
 
+.ProjectsSection::after {
+  content: ""; /* ::after 요소를 표시하기 위해 필요 */
+  position: absolute; /* 부모 안에 위치하도록 설정 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90%;
+  background: radial-gradient(
+    circle,
+    rgba(199, 58, 7, 0.8) 5%,  
+    rgba(199, 58, 7, 0.2) 35%,   
+    rgba(215, 97, 54, 0) 50%    
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .projects__title {
   color: var(--colour-beige);
+  z-index: 6;
 }
 
 .projects__filter {
