@@ -16,7 +16,7 @@ import groceryShop from "../../Assets/groceryShop.png";
 import weatherApp from "../../Assets/weatherApp.png";
 import ProjectCard from "./ProjectCard/ProjectCard";
 
-const Skills = () => {
+const Skills = ({ skillsRef, projectsRef }) => {
   const projects = [
     {
       url: "https://www.linkedin.com/feed/update/urn:li:activity:7249378011748151296/",
@@ -77,7 +77,7 @@ const Skills = () => {
           ></path>
         </svg>
       </div>
-      <div className='skillsSection'>
+      <div className='skillsSection' ref={skillsRef}>
         <h2 className='skills__title sectionTitle'>Skills</h2>
         <p>
           I mainly use HTML, CSS and Java Script for building website,
@@ -153,7 +153,7 @@ const Skills = () => {
           </div>
         </div>
       </div>
-      <div className='ProjectsSection'>
+      <div className='ProjectsSection' ref={projectsRef}>
         <h2 className='projects__title sectionTitle'>Projects</h2>
         <p></p>
         <ul className='projects__list'>
