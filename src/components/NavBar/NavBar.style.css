@@ -66,11 +66,19 @@
 }
 
 .navBar__menu_item {
-    padding: 5px 20px;
-    margin: 5px;
+    padding: 5px 5px;
+    margin: 5px 20px;
     font-size: 17px;
     font-weight: 600;
     cursor: pointer;
+}
+
+.navBar__menu_item:hover {
+    color: var(--colour-red);
+}
+
+.navBar__menu_item.active {
+    border-bottom: 3px solid var(--colour-red);
 }
 
 .hamburger-bar{

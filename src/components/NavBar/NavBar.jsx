@@ -5,12 +5,21 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 
-const NavBar = ({ scrollToSection, refs }) => {
+const NavBar = ({ scrollToSection, refs, activeSection }) => {
   const { homeRef, aboutMeRef, skillsRef, projectsRef, contactRef } = refs;
 
   const navigate = useNavigate();
   const goToLandingPage = () => {
     navigate("/");
+  };
+
+  const menuItems = ["Home", "About Me", "Skills", "Projects", "Contact"];
+  const sectionRefs = {
+    home: homeRef,
+    aboutme: aboutMeRef,
+    skills: skillsRef,
+    projects: projectsRef,
+    contact: contactRef,
   };
 
   return (
@@ -22,6 +31,23 @@ const NavBar = ({ scrollToSection, refs }) => {
         onClick={goToLandingPage}
       />
       <span className='navBar__mainLogo_text'>Go Back!</span>
+      <ul>
+        {menuItems.map((item, index) => (
+          <li
+            key={item}
+            className={`navBar__menu_item ${activeSection === index ? "active" : ""}`}
+            onClick={() => {
+              const key = item.toLowerCase().replace(" ", "");
+              const targetRef = sectionRefs[key];
+              if (targetRef) {
+                scrollToSection(targetRef);
+              }
+            }}
+          >
+            {item}
+          </li>
+        ))}
+      </ul>
       <ul className='navBar__menu'>
         <li
           className='navBar__menu_item'
