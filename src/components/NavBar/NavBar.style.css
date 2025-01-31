@@ -78,7 +78,7 @@
 }
 
 .navBar__menu_item.active {
-    border-bottom: 3px solid var(--colour-red);
+    border-bottom: 3px solid blue;
 }
 
 .hamburger-bar{

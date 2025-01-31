@@ -1,5 +1,5 @@
 .mainSection{
-  height: 100vh;
+  height: 110vh;
   margin: 0;
   display: flex;
   justify-content: center;
@@ -141,7 +141,7 @@
 
 .custom-shape-divider-bottom-1729844857 {
   position: absolute;
-  bottom: 0;
+  bottom: -10%;
   left: 0;
   width: 100%;
   overflow: hidden;

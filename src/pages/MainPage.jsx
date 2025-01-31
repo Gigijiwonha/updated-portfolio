@@ -27,14 +27,16 @@ const MainPage = () => {
     };
 
     const handleIntersection = (entries) => {
-      let lastVisibleIndex = -1;
+      let lastVisibleIndex;
+      console.log("entries>>>", entries);
 
       entries.forEach((entry, index) => {
         if (entry.isIntersecting) {
           lastVisibleIndex = index;
         }
+        console.log("index", index);
       });
-
+      console.log("current entry index>>", lastVisibleIndex);
       if (lastVisibleIndex !== -1) {
         setActiveSection(lastVisibleIndex);
       }
@@ -47,14 +49,6 @@ const MainPage = () => {
         observer.observe(ref.current);
       }
     });
-
-    return () => {
-      sectionRefs.forEach((ref) => {
-        if (ref.current) {
-          observer.unobserve(ref.current);
-        }
-      });
-    };
   }, [sectionRefs]);
 
   return (
@@ -71,9 +65,9 @@ const MainPage = () => {
         <AboutMe />
       </div>
       <div ref={skillsRef}>
-        <SkillsProjects 
-        skillsRef={skillsRef} 
-        projectsRef={projectsRef}  
+        <SkillsProjects
+          skillsRef={skillsRef}
+          projectsRef={projectsRef}
         />
       </div>
       <div ref={contactRef}>

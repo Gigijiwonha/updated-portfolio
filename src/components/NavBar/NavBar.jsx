@@ -31,7 +31,7 @@ const NavBar = ({ scrollToSection, refs, activeSection }) => {
         onClick={goToLandingPage}
       />
       <span className='navBar__mainLogo_text'>Go Back!</span>
-      <ul>
+      <ul className='navBar__menu'>
         {menuItems.map((item, index) => (
           <li
             key={item}
@@ -48,7 +48,7 @@ const NavBar = ({ scrollToSection, refs, activeSection }) => {
           </li>
         ))}
       </ul>
-      <ul className='navBar__menu'>
+      {/* <ul className='navBar__menu'>
         <li
           className='navBar__menu_item'
           onClick={() => scrollToSection(homeRef)}
@@ -79,7 +79,7 @@ const NavBar = ({ scrollToSection, refs, activeSection }) => {
         >
           Contact
         </li>
-      </ul>
+      </ul> */}
       {/* <button className='hamburger-bar'><FontAwesomeIcon icon={faBars} /></button> */}
     </div>
   );
