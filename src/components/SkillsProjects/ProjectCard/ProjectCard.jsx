@@ -1,9 +1,13 @@
 import React from "react";
 import "./ProjectCard.style.css";
 
-const ProjectCard = ({ url, img, title, description, tools }) => {
-
-  const buttonText = title === "Spotify-Demo" ? "Demo Video" : "Website";
+const ProjectCard = ({ url, img, git, title, description, tools }) => {
+  const buttonText =
+    title === "Spotify-Demo"
+      ? "Demo Video"
+      : title === "Online Grocery Shop"
+      ? "Coming soon"
+      : "Website";
 
   return (
     <li className='projects__list-item'>
@@ -19,14 +23,9 @@ const ProjectCard = ({ url, img, title, description, tools }) => {
           <h3 className='project__title'>{title}</h3>
           <p className='project__description'>{description}</p>
           <ul className='project__tools'>
-            {tools.map((tool, index) => (
-              <li
-                key={index}
-                className='project__tool'
-              >
-                #{tool}
-              </li>
-            ))}
+            <li className='project__tool'>
+              {tools.map((tool, index) => `#${tool}`).join("  ")}
+            </li>
           </ul>
           <div className='project__btns'>
             <a
@@ -37,7 +36,7 @@ const ProjectCard = ({ url, img, title, description, tools }) => {
               {buttonText}
             </a>
             <a
-              href={url}
+              href={git}
               target='_blank'
               className='project__btn'
             >

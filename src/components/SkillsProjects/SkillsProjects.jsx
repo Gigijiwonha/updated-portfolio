@@ -20,45 +20,53 @@ const Skills = ({ skillsRef, projectsRef }) => {
   const projects = [
     {
       url: "https://www.linkedin.com/feed/update/urn:li:activity:7249378011748151296/",
+      git: "https://github.com/Gigijiwonha/spotify-demo",
       img: spotifyDemo,
       title: "Spotify-Demo",
-      description: "Using TMBd API to display data",
+      description: "Fetching data via Spotify API",
       tools: ["JS", "React", "React Query", "Axios"],
     },
     {
       url: "https://nutflix-demo-by-gigi.netlify.app",
+      git: "https://github.com/Gigijiwonha/netflix-demo",
       img: netflixDemo,
       title: "Netflix-Demo",
-      description: "Using TMBd API to display data",
+      description: "Displaying data with TMDb API",
       tools: ["JS", "React", "React Query", "Axios"],
     },
     {
       url: "https://online-retail-store-by-gigi.netlify.app",
+      git: "https://github.com/Gigijiwonha/online-retail-store",
       img: retailShop,
       title: "Online Retail Shop",
-      description: "Using JSON Server to display data",
+      description: "Serving data using JSON Server",
       tools: ["JS", "React", "JSON Server"],
     },
     {
-      url: "https://grocery-shopping-website-by-gigi.netlify.app",
-      img: groceryShop,
-      title: "Online Grocery Shop",
-      description: "Using TMBd API to display data",
+      url: "https://weatherapp-by-gigi.netlify.app/",
+      git: "https://github.com/Gigijiwonha/updated-weather-app",
+      img: weatherApp,
+      title: "Weather Application",
+      description: "Retrieving data from OpenWeather API",
       tools: ["JS", "React", "React Query", "Axios"],
     },
     {
       url: "https://go-to-list-by-gigi.netlify.app",
+      git: "https://github.com/Gigijiwonha/go-to-list",
       img: goToList,
       title: "Create Your Go-To List",
-      description: "Using Bootstrap and Redux to create a small application",
+      description: "Building a small app with Bootstrap & Redux",
       tools: ["JS", "React", "Bootstrap", "Redux"],
     },
     {
-      url: "https://weather-app-by-gigi.netlify.app",
-      img: weatherApp,
-      title: "Weather Application",
-      description: "Using TMBd API to display data",
-      tools: ["JS", "React", "React Query", "Axios"],
+      //https://grocery-shopping-website-by-gigi.netlify.app
+      // https://github.com/Gigijiwonha/online-grocery-store
+      url: "",
+      git: "",
+      img: groceryShop,
+      title: "Online Grocery Shop",
+      description: "Storing data with local storage",
+      tools: ["JS", "PHP", "Local storage"],
     },
   ];
 
@@ -161,6 +169,7 @@ const Skills = ({ skillsRef, projectsRef }) => {
             <ProjectCard
               key={index}
               url={project.url}
+              git={project.git}
               img={project.img}
               title={project.title}
               description={project.description}
