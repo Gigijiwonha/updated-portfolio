@@ -59,7 +59,10 @@ const MainPage = () => {
         activeSection={activeSection}
       />
       <div ref={homeRef}>
-        <MainSection />
+        <MainSection 
+        scrollToSection={scrollToSection}
+        contactRef = {contactRef}
+        />
       </div>
       <div ref={aboutMeRef}>
         <AboutMe />

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./MainSection.style.css";
 
-const MainSection = () => {
+const MainSection = ({scrollToSection, contactRef}) => {
   const [greetingMessage, setGreetingMessage] = useState("");
 
   useEffect(() => {
@@ -43,7 +43,7 @@ const MainSection = () => {
         <h1>I'm Gigi Jiwon Ha.</h1>
         <div className='mainSection__container__loading'>
           <p>Today's growing pains, growing <strong>1%</strong> stronger.</p>
-          <button>Contact Me</button>
+          <button onClick={()=>scrollToSection(contactRef)}>Contact Me</button>
         </div>
       </div>
       <div class="custom-shape-divider-bottom-1729844857">
