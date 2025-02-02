@@ -19,6 +19,13 @@ const MainPage = () => {
 
   const sectionRefs = [homeRef, aboutMeRef, skillsRef, projectsRef, contactRef];
   const [activeSection, setActiveSection] = useState(0);
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  const getScrollPostion = () => {
+    const getScrollY = window.scrollY;
+    setScrollPosition(getScrollY);
+    console.log("nav scroll>>>", scrollPosition);
+  };
 
   useEffect(() => {
     const options = {
@@ -51,17 +58,26 @@ const MainPage = () => {
     });
   }, [sectionRefs]);
 
+  useEffect(() => {
+    window.addEventListener("scroll", getScrollPostion);
+
+    return () => {
+      window.removeEventListener("scroll", getScrollPostion); // 클린업
+    };
+  }, []);
+
   return (
     <div>
       <NavBar
         scrollToSection={scrollToSection}
         refs={{ homeRef, aboutMeRef, skillsRef, projectsRef, contactRef }}
         activeSection={activeSection}
+        scrollPosition={scrollPosition}
       />
       <div ref={homeRef}>
-        <MainSection 
-        scrollToSection={scrollToSection}
-        contactRef = {contactRef}
+        <MainSection
+          scrollToSection={scrollToSection}
+          contactRef={contactRef}
         />
       </div>
       <div ref={aboutMeRef}>

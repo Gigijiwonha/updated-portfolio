@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./NavBar.style.css";
 import mainLogoRed from "../../Assets/mainLogoRed.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 
-const NavBar = ({ scrollToSection, refs, activeSection }) => {
+const NavBar = ({ scrollToSection, refs, activeSection, scrollPosition }) => {
   const { homeRef, aboutMeRef, skillsRef, projectsRef, contactRef } = refs;
 
   const navigate = useNavigate();
@@ -31,7 +31,7 @@ const NavBar = ({ scrollToSection, refs, activeSection }) => {
         onClick={goToLandingPage}
       />
       <span className='navBar__mainLogo_text'>Go Back!</span>
-      <ul className='navBar__menu'>
+      <ul className={`navBar__menu ${scrollPosition >= 150 ? "bg-active" : ""}`}>
         {menuItems.map((item, index) => (
           <li
             key={item}
