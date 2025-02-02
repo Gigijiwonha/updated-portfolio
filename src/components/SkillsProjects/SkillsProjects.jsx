@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./SkillsProjects.style.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -35,14 +35,6 @@ const Skills = ({ skillsRef, projectsRef }) => {
       tools: ["JS", "React", "React Query", "Axios"],
     },
     {
-      url: "https://online-retail-store-by-gigi.netlify.app",
-      git: "https://github.com/Gigijiwonha/online-retail-store",
-      img: retailShop,
-      title: "Online Retail Shop",
-      description: "Serving data using JSON Server",
-      tools: ["JS", "React", "JSON Server"],
-    },
-    {
       url: "https://weatherapp-by-gigi.netlify.app/",
       git: "https://github.com/Gigijiwonha/updated-weather-app",
       img: weatherApp,
@@ -57,6 +49,14 @@ const Skills = ({ skillsRef, projectsRef }) => {
       title: "Create Your Go-To List",
       description: "Building a small app with Bootstrap & Redux",
       tools: ["JS", "React", "Bootstrap", "Redux"],
+    },
+    {
+      url: "https://online-retail-store-by-gigi.netlify.app",
+      git: "https://github.com/Gigijiwonha/online-retail-store",
+      img: retailShop,
+      title: "Online Retail Shop",
+      description: "Serving data using JSON Server",
+      tools: ["JS", "React", "JSON Server"],
     },
     {
       //https://grocery-shopping-website-by-gigi.netlify.app
@@ -175,15 +175,17 @@ const Skills = ({ skillsRef, projectsRef }) => {
         <p></p>
         <ul className='projects__list'>
           {projects.map((project, index) => (
-            <ProjectCard
-              key={index}
-              url={project.url}
-              git={project.git}
-              img={project.img}
-              title={project.title}
-              description={project.description}
-              tools={project.tools}
-            />
+            <div className='projects__list__item'>
+              <ProjectCard
+                key={index}
+                url={project.url}
+                git={project.git}
+                img={project.img}
+                title={project.title}
+                description={project.description}
+                tools={project.tools}
+              />
+            </div>
           ))}
         </ul>
         <div class='custom-shape-divider-bottom-1733294184'>
