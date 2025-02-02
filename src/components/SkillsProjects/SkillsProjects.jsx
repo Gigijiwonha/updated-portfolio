@@ -85,11 +85,17 @@ const Skills = ({ skillsRef, projectsRef }) => {
           ></path>
         </svg>
       </div>
-      <div className='skillsSection' ref={skillsRef}>
+      <div
+        className='skillsSection'
+        ref={skillsRef}
+      >
         <h2 className='skills__title sectionTitle'>Skills</h2>
         <p>
-          I mainly use HTML, CSS and Java Script for building website,
-          additionally I had some experience using Swift and Jave at Uni
+          I primarily use HTML, CSS, and JavaScript to build websites.
+          Additionally, I have academic experience with Swift and Java from my
+          university coursework. I've utilised libraries like React, React
+          Query, Redux, Middleware Thunk, and Axios in various personal projects
+          and contributed to a team project as well.
         </p>
         <div className='skills__gridContainer'>
           <div className='skills__language girdBox'>
@@ -161,7 +167,10 @@ const Skills = ({ skillsRef, projectsRef }) => {
           </div>
         </div>
       </div>
-      <div className='ProjectsSection' ref={projectsRef}>
+      <div
+        className='ProjectsSection'
+        ref={projectsRef}
+      >
         <h2 className='projects__title sectionTitle'>Projects</h2>
         <p></p>
         <ul className='projects__list'>
@@ -178,20 +187,19 @@ const Skills = ({ skillsRef, projectsRef }) => {
           ))}
         </ul>
         <div class='custom-shape-divider-bottom-1733294184'>
-        <svg
-          data-name='Layer 1'
-          xmlns='http://www.w3.org/2000/svg'
-          viewBox='0 0 1200 120'
-          preserveAspectRatio='none'
-        >
-          <path
-            d='M1200,0H0V120H281.94C572.9,116.24,602.45,3.86,602.45,3.86h0S632,116.24,923,120h277Z'
-            class='shape-fill'
-          ></path>
-        </svg>
+          <svg
+            data-name='Layer 1'
+            xmlns='http://www.w3.org/2000/svg'
+            viewBox='0 0 1200 120'
+            preserveAspectRatio='none'
+          >
+            <path
+              d='M1200,0H0V120H281.94C572.9,116.24,602.45,3.86,602.45,3.86h0S632,116.24,923,120h277Z'
+              class='shape-fill'
+            ></path>
+          </svg>
+        </div>
       </div>
-      </div>
-      
     </div>
   );
 };
