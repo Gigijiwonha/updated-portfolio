@@ -92,7 +92,10 @@ const MainPage = () => {
       <div ref={contactRef}>
         <Contact />
       </div>
-      <Footer />
+      <Footer
+        scrollToSection={scrollToSection}
+        refs={{ homeRef, aboutMeRef, skillsRef, projectsRef, contactRef }}
+      />
     </div>
   );
 };

@@ -4,7 +4,8 @@ import mainLogoStroke from "../../Assets/mainLogoStroke.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSquareGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
-const Footer = () => {
+const Footer = ({ scrollToSection, refs }) => {
+  const { homeRef, aboutMeRef, skillsRef, projectsRef, contactRef } = refs;
   return (
     <div className='footerSection'>
       <div className='footer__container'>
@@ -18,26 +19,32 @@ const Footer = () => {
         </div>
         <div className='footer__container--right'>
           <ul className='footer__containter--navList'>
-            <li>Home</li>
-            <li>About Me</li>
-            <li>Skills</li>
-            <li>projects</li>
-            <li>Contact Me</li>
+            <li onClick={() => scrollToSection(homeRef)}>Home</li>
+            <li onClick={() => scrollToSection(aboutMeRef)}>About Me</li>
+            <li onClick={() => scrollToSection(skillsRef)}>Skills</li>
+            <li onClick={() => scrollToSection(projectsRef)}>projects</li>
+            <li onClick={() => scrollToSection(contactRef)}>Contact Me</li>
           </ul>
-          <ul className='footer__containter--icons'>
-            <li>
+          <div className='footer__containter--icons'>
+            <a
+              href={"https://github.com/Gigijiwonha"}
+              target='_blank'
+            >
               <FontAwesomeIcon
                 icon={faSquareGithub}
                 className='footer__icon'
               />
-            </li>
-            <li>
+            </a>
+            <a
+              href={"https://www.linkedin.com/in/gigi-jiwon-ha/"}
+              target='_blank'
+            >
               <FontAwesomeIcon
                 icon={faLinkedin}
                 className='footer__icon'
               />
-            </li>
-          </ul>
+            </a>
+          </div>
         </div>
       </div>
       <div className='footer__copyright'>
