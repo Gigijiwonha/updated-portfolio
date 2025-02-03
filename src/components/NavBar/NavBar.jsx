@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { act, useEffect, useRef, useState } from "react";
 import "./NavBar.style.css";
 import mainLogoRed from "../../Assets/mainLogoRed.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -7,6 +7,25 @@ import { useNavigate } from "react-router-dom";
 
 const NavBar = ({ scrollToSection, refs, activeSection, scrollPosition }) => {
   const { homeRef, aboutMeRef, skillsRef, projectsRef, contactRef } = refs;
+  const navRef = useRef(0);
+  const [navWidth, setNavWith] = useState(0);
+  const [isToggled, setIsToggled] = useState(false);
+
+  const getNavWidth = () => {
+    const getWidth = navRef.current.clientWidth;
+    console.log("nav width>>>", getWidth);
+    setNavWith(getWidth);
+  };
+
+  const toggleBurgerBar = () => {
+    setIsToggled(!isToggled);
+  };
+
+  useEffect(() => {
+    getNavWidth();
+    window.addEventListener("resize", getNavWidth);
+    return () => window.removeEventListener("resize", getNavWidth);
+  }, [navWidth]);
 
   const navigate = useNavigate();
   const goToLandingPage = () => {
@@ -23,7 +42,10 @@ const NavBar = ({ scrollToSection, refs, activeSection, scrollPosition }) => {
   };
 
   return (
-    <div className='navBar'>
+    <div
+      className='navBar'
+      ref={navRef}
+    >
       <img
         className='navBar__mainLogo'
         src={mainLogoRed}
@@ -31,11 +53,17 @@ const NavBar = ({ scrollToSection, refs, activeSection, scrollPosition }) => {
         onClick={goToLandingPage}
       />
       <span className='navBar__mainLogo_text'>Go Back!</span>
-      <ul className={`navBar__menu ${scrollPosition >= 150 ? "bg-active" : ""}`}>
+      <ul
+        className={`navBar__menu ${scrollPosition >= 150 ? "bg-active" : ""} ${
+          navWidth <= 768 ? "fade" : ""
+        }`}
+      >
         {menuItems.map((item, index) => (
           <li
             key={item}
-            className={`navBar__menu_item ${activeSection === index ? "active" : ""}`}
+            className={`navBar__menu_item ${
+              activeSection === index ? "active" : ""
+            }`}
             onClick={() => {
               const key = item.toLowerCase().replace(" ", "");
               const targetRef = sectionRefs[key];
@@ -48,39 +76,34 @@ const NavBar = ({ scrollToSection, refs, activeSection, scrollPosition }) => {
           </li>
         ))}
       </ul>
-      {/* <ul className='navBar__menu'>
-        <li
-          className='navBar__menu_item'
-          onClick={() => scrollToSection(homeRef)}
-        >
-          Home
-        </li>
-        <li
-          className='navBar__menu_item'
-          onClick={() => scrollToSection(aboutMeRef)}
-        >
-          About Me
-        </li>
-        <li
-          className='navBar__menu_item'
-          onClick={() => scrollToSection(skillsRef)}
-        >
-          Skills
-        </li>
-        <li
-          className='navBar__menu_item'
-          onClick={() => scrollToSection(projectsRef)}
-        >
-          Projects
-        </li>
-        <li
-          className='navBar__menu_item'
-          onClick={() => scrollToSection(contactRef)}
-        >
-          Contact
-        </li>
-      </ul> */}
-      {/* <button className='hamburger-bar'><FontAwesomeIcon icon={faBars} /></button> */}
+      <button
+        onClick={() => toggleBurgerBar()}
+        className={`hamburger-bar ${navWidth <= 768 ? "enabled" : ""} ${
+          isToggled ? "beige" : ""
+        }`}
+      >
+        <FontAwesomeIcon icon={faBars} />
+      </button>
+      <div className={`sideBar ${isToggled ? "toggled" : ""}`}>
+        <ul className='sideBar__list'>
+          {menuItems.map((item, index) => (
+            <li
+              key={item}
+              className='sideBar__item'
+              onClick={() => {
+                const key = item.toLowerCase().replace(" ", "");
+                const targetRef = sectionRefs[key];
+                if (targetRef) {
+                  scrollToSection(targetRef);
+                  toggleBurgerBar();
+                }
+              }}
+            >
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };

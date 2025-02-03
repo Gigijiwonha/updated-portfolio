@@ -68,12 +68,13 @@ const MainPage = () => {
 
   return (
     <div>
-      <NavBar
-        scrollToSection={scrollToSection}
-        refs={{ homeRef, aboutMeRef, skillsRef, projectsRef, contactRef }}
-        activeSection={activeSection}
-        scrollPosition={scrollPosition}
-      />
+        <NavBar
+          scrollToSection={scrollToSection}
+          refs={{homeRef, aboutMeRef, skillsRef, projectsRef, contactRef }}
+          activeSection={activeSection}
+          scrollPosition={scrollPosition}
+        />
+
       <div ref={homeRef}>
         <MainSection
           scrollToSection={scrollToSection}
