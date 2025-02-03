@@ -190,3 +190,15 @@
     font-size: 0.7rem;
   }
 }
+
+@media (max-width: 480px) {
+  .popup-message {
+    font-size: .9rem;
+  }
+
+  .btn-container__btn {
+    padding: 0.5rem 0;
+    width: 12rem;
+    font-size: .9rem;
+  }
+}

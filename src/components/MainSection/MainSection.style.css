@@ -174,7 +174,7 @@
   }
 
   .mainSection__container p {
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 
   .mainSection__container p::before {
@@ -203,9 +203,55 @@
     left: 10%;
     width: 80%;
   }
-  
+
   .mainSection__container p::after {
     left: 10%;
     width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainSection {
+    height: 100vh;
+  }
+
+  .mainSection__container h2 {
+    font-size: 2rem;
+  }
+
+  .mainSection__container h1 {
+    font-size: 2rem;
+  }
+
+  .mainSection__container__loading {
+    width: 80vw;
+  }
+
+  .mainSection__container p {
+    font-size: 0.75rem;
+  }
+
+  .mainSection__container p::before {
+    margin-top: 0.2rem;
+  }
+
+  .mainSection__container p::after {
+    margin-top: 0.2rem;
+  }
+
+  .mainSection__container__loading button {
+    width: 11rem;
+    padding: 0.4rem 0;
+    font-size: 0.9rem;
+    margin-top: 5rem;
+  }
+
+  .custom-shape-divider-bottom-1729844857 {
+    bottom: 0;
+  }
+
+  .custom-shape-divider-bottom-1729844857 svg {
+    width: calc(230% + 20px);
+    height: 100px;
   }
 }

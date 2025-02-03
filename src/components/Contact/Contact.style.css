@@ -86,8 +86,8 @@
 /* Responsive Media Query */
 @media (max-width: 1024px) {
   .contactSection {
-    height: 130vh;
-    padding: 200px 0 100px;
+    height: 100vh;
+    margin-top: 50px;
   }
 
   .contactMe__form {
@@ -105,11 +105,6 @@
 }
 
 @media (max-width: 768px){
-  .contactSection {
-    height: 180vh;
-    padding: 600px 0 100px;
-  }
-
   .contactMe__form {
     width: 70%;
     gap: 10px;
@@ -122,5 +117,17 @@
 
   .contactMe__input--submit {
     font-size: 13px;
+  }
+}
+
+@media (max-width: 480px){
+  .contactMe__form {
+    width: 80%;
+    gap: 7px;
+    padding: 12px;
+  }
+  
+  .contactMe__label {
+    font-size: 12px;
   }
 }

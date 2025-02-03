@@ -111,54 +111,54 @@
 }
 
 .hamburger-bar.enabled:hover {
-    cursor: pointer;
-    color: var(--colour-red);
+  cursor: pointer;
+  color: var(--colour-red);
 }
 
 .hamburger-bar.enabled.beige {
-    color: var(--colour-beige);
+  color: var(--colour-beige);
 }
 
 .hamburger-bar.enabled.beige:hover {
-    color: var(--colour-darkGray);
+  color: var(--colour-darkGray);
 }
 
 .sideBar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: var(--colour-red);
-    z-index: -1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: translateY(-100%);
-    transition: transform 0.3s ease-in-out;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--colour-red);
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
 }
 
 .sideBar.toggled {
-    transform: translateY(0);
+  transform: translateY(0);
 }
 
 .sideBar__item {
-    color: var(--colour-beige);
-    text-align: center;
-    font-size: 1.2rem;
-    font-weight: 700;
-    padding: .3rem 2.5rem;
-    margin: 1.1rem;
-    transition: all .2s ease-in-out;
+  color: var(--colour-beige);
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 0.3rem 2.5rem;
+  margin: 1.1rem;
+  transition: all 0.2s ease-in-out;
 }
 
 .sideBar__item:hover {
-    cursor: pointer;
-    background-color: var(--colour-beige);
-    border-radius: 50px;
-    color: var(--colour-red);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.25);
-    transform: scale(1.1);
+  cursor: pointer;
+  background-color: var(--colour-beige);
+  border-radius: 50px;
+  color: var(--colour-red);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.25);
+  transform: scale(1.1);
 }
 
 /* Responsive Media Query */
@@ -169,5 +169,26 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
+  .navBar {
+    padding: 18px 20px;
+  }
+
+  .navBar__mainLogo {
+    height: 70px;
+  }
+
+  .hamburger-bar {
+    top: 20%;
+    right: 3%;
+    font-size: 1.9rem;
+  }
+
+  .sideBar__item {
+    font-size: 1rem;
+  }
+
+  .sideBar__item:hover {
+    transform: scale(1.08);
+  }
 }
