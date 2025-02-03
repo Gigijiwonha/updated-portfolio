@@ -103,11 +103,11 @@
   font-size: 2rem;
   background-color: transparent;
   color: var(--colour-darkGray);
-  opacity: 0;
+  transform: translateY(-200%);
 }
 
 .hamburger-bar.enabled {
-  opacity: 1;
+  transform: translateY(0);
 }
 
 .hamburger-bar.enabled:hover {
