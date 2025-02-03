@@ -113,7 +113,7 @@
 /* Responsive Media Query */
 @media (max-width: 1024px) {
   .aboutMeSection::after{
-    width: 40vw;
+    width: 33vw;
   }
 
   .aboutMe__content {
