@@ -96,3 +96,11 @@
     background-color: transparent;
     color: var(--colour-darkGray);
 }
+
+/* Responsive Media Query */
+@media (max-width: 1024px) {
+    .navBar__menu_item {
+        margin: 5px 13px;
+        font-size: 14px;
+    }
+}
