@@ -131,3 +131,27 @@
     font-size: 0.8rem;
   }
 }
+
+@media (max-width: 768px) {
+  .footer__container {
+    padding: 2rem;
+  }
+
+  .footer__containter--navList {
+    flex-direction: column;
+    gap: .5rem;
+  }
+
+  .footer__containter--icons {
+    margin-top: .3rem;
+    font-size: .8rem;
+  }
+
+  .footer__container--left p {
+    margin-top: 5rem;
+  }
+
+  .footer__copyright p {
+    font-size: 0.7rem;
+  }
+}

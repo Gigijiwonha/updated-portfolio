@@ -103,3 +103,24 @@
     font-size: 14px;
   }
 }
+
+@media (max-width: 768px){
+  .contactSection {
+    height: 180vh;
+    padding: 600px 0 100px;
+  }
+
+  .contactMe__form {
+    width: 70%;
+    gap: 10px;
+    padding: 20px;
+  }
+  
+  .contactMe__label {
+    font-size: 13px;
+  }
+
+  .contactMe__input--submit {
+    font-size: 13px;
+  }
+}

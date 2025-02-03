@@ -150,3 +150,35 @@
     font-weight: 500;
   }
 }
+
+@media (max-width: 768px) {
+  .aboutMeSection{
+    height: 120vh;
+  }
+  
+  .aboutMe__content {
+    flex-direction: column;
+  }
+
+  .aboutMeSection::after{
+    top: 38%;
+    height: 20vh;
+    width: 55vw;
+  }
+
+  .aboutMe__content {
+    width: 85%;
+  }
+
+  .aboutMe__content__name h1{
+    font-size: 3rem;
+  }
+
+  .aboutMe__content__img{
+    max-height: 35vh; 
+  }
+
+  .aboutMe__content__title{
+    margin-bottom: 1.2rem;
+  }
+}
