@@ -185,3 +185,27 @@
     margin-top: 0.4rem;
   }
 }
+
+@media (max-width: 768px) {
+  .mainSection__container h2 {
+    font-size: 2.6rem;
+  }
+
+  .mainSection__container h1 {
+    font-size: 2.6rem;
+  }
+
+  .mainSection__container__loading {
+    width: 70vw;
+  }
+
+  .mainSection__container p::before {
+    left: 10%;
+    width: 80%;
+  }
+  
+  .mainSection__container p::after {
+    left: 10%;
+    width: 80%;
+  }
+}
