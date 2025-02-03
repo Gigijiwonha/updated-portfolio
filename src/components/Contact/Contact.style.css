@@ -82,3 +82,24 @@
   background-color: #ccc;
   cursor: not-allowed;
 }
+
+/* Responsive Media Query */
+@media (max-width: 1024px) {
+  .contactSection {
+    height: 130vh;
+    padding: 200px 0 100px;
+  }
+
+  .contactMe__form {
+    gap: 15px;
+    padding: 25px;
+  }
+  
+  .contactMe__label {
+    font-size: 14px;
+  }
+
+  .contactMe__input--submit {
+    font-size: 14px;
+  }
+}
