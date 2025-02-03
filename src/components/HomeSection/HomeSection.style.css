@@ -153,3 +153,33 @@
   font-size: 0.9rem;
   color: var(--colour-beige);
 }
+
+/* Responsive Media Query */
+@media (max-width: 1024px) {
+  .btn-container__mainLogoImg {
+    height: 18vh;
+  }
+
+  .btn-container__btn {
+    border-radius: 3rem;
+    margin-top: 1.5rem;
+    padding: 1.2rem 0;
+    width: 17rem;
+    font-size: 1.3rem;
+    transition: all 0.3s ease-out;
+  }
+
+  .btn-container__btn::after {
+    opacity: 0.1;
+    animation: flashHighlight 2s ease-in-out infinite;
+  }
+
+  @keyframes flashHighlight {
+    0% {
+      transform: translate(-100%, -100%) rotate(45deg);
+    }
+    100% {
+      transform: translate(-20%, -20%) rotate(45deg);
+    }
+  }
+}
