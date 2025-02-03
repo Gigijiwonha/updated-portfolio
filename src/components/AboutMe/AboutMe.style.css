@@ -18,7 +18,7 @@
   left: 0;
   transform: translateY(-50%);
   height: 30vh;
-  width: 30vw;
+  width: 33vw;
   background-color: var(--colour-beige);
   z-index: 0;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
@@ -102,7 +102,7 @@
 .aboutMe__content__title h3{
   margin: 0;
   color: var(--colour-beige);
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 .aboutMe__content__description{

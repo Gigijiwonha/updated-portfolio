@@ -1,74 +1,84 @@
-.contactSection{
-    height: 120vh;
-    box-sizing: border-box;
-    padding: 100px 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    margin: 0;
-    background-color: var(--colour-beige);
+.contactSection {
+  height: 120vh;
+  box-sizing: border-box;
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 0;
+  background-color: var(--colour-beige);
 }
 
 .contactMe__title {
-    color: var(--colour-red);
+  color: var(--colour-red);
 }
 
 .contactMe__form {
-    width: 40%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .contactMe__label {
-    font-size: 16px;
-    font-weight: bold;
-  }
-  
-  .contactMe__input,
-  .contactMe__textarea {
-    width: 100%;
-    padding: 10px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    outline: none;
-    transition: border-color 0.3s ease;
-  }
-  
-  .contactMe__input:focus,
-  .contactMe__textarea:focus {
-    border-color: red;
-  }
-  
-  .contactMe__textarea {
-    resize: none;
-    height: 150px;
-  }
-  
-  .contactMe__input--submit {
-    background-color: red;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .contactMe__input--submit:hover {
-    background-color: darkred;
-  }
-  
-  .contactMe__input--submit:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-  }
+  width: 60%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: rgb(215, 97, 54);
+  background: linear-gradient(
+    0deg,
+    rgba(215, 97, 54, 1) 51%,
+    rgba(199, 58, 7, 1) 100%
+  );
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.contactMe__label {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--colour-beige);
+}
+
+.contactMe__input,
+.contactMe__textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.contactMe__input:focus,
+.contactMe__textarea:focus {
+  border: 2px solid var(--colour-darkGray);
+}
+
+.contactMe__textarea {
+  resize: none;
+  height: 150px;
+}
+
+.contactMe__input--submit {
+  background-color: var(--colour-beige);
+  color: var(--colour-red);
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contactMe__input--submit:hover {
+  background-color: var(--colour-red);
+  color: var(--colour-beige);
+  border: 2px solid var(--colour-beige);
+}
+
+.contactMe__input--submit:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
