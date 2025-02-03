@@ -188,7 +188,7 @@ const Skills = ({ skillsRef, projectsRef }) => {
             </div>
           ))}
         </ul>
-        <div class='custom-shape-divider-bottom-1733294184'>
+        <div class='custom-shape-divider-bottom-1738544114'>
           <svg
             data-name='Layer 1'
             xmlns='http://www.w3.org/2000/svg'
@@ -196,7 +196,7 @@ const Skills = ({ skillsRef, projectsRef }) => {
             preserveAspectRatio='none'
           >
             <path
-              d='M1200,0H0V120H281.94C572.9,116.24,602.45,3.86,602.45,3.86h0S632,116.24,923,120h277Z'
+              d='M649.97 0L599.91 54.12 550.03 0 0 0 0 120 1200 120 1200 0 649.97 0z'
               class='shape-fill'
             ></path>
           </svg>
