@@ -109,3 +109,44 @@
   color: var(--colour-beige);
   text-align: center;
 }
+
+/* Responsive Media Query */
+@media (max-width: 1024px) {
+  .aboutMeSection::after{
+    width: 40vw;
+  }
+
+  .aboutMe__content {
+    width: 96%;
+    gap: .5rem;
+  }
+
+  .aboutMe__content__name h1{
+    font-size: 3.5rem;
+    font-weight: 800;
+    text-shadow: 0 4px 5px rgba(0, 0, 0, 0.25);
+  }
+  
+  .aboutMe__content__name h2{
+    font-size: 1.2rem;
+  }
+
+  .aboutMe__content__img{
+    max-height: 40vh; 
+  }
+
+  .aboutMe__content__title{
+    margin-bottom: 1rem;
+  }
+  
+  .aboutMe__content__title h3{
+    font-size: 1.4rem;
+    font-weight: 800;
+  }
+  
+  .aboutMe__content__description{
+    margin: 0;
+    font-size: .9rem;
+    font-weight: 500;
+  }
+}
