@@ -25,11 +25,11 @@ const AboutMe = () => {
             <h3>UI/UX Design Expertise </h3>
           </div>
           <p className='aboutMe__content__description'>
-            With my background in UX/UI design, I'm excited to move into
-            front-end development. This combination of skills allows me to
-            approach problems from a unique perspective, setting me apart from
-            other developers. I aim to weave design principles into my coding to
-            create a smooth and enjoyable user experience.
+            With my UX/UI design background, I bring a unique perspective to
+            front-end development—bridging user experience, design
+            collaboration, and technical problem-solving. When others said a
+            designer couldn’t become a developer, my willpower turned it into
+            progress. With a can-do attitude, I keep growing as a developer.
           </p>
         </div>
       </div>
