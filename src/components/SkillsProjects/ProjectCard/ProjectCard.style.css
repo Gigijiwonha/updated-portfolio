@@ -40,13 +40,11 @@
   z-index: 1;
   transition: all 0.25s ease-in;
   transform: translateY(-7px);
-  pointer-events: none;
 }
 
 .project__metadata:hover {
   opacity: 1;
   transform: translateY(0);
-  pointer-events: auto;
 }
 
 .project__title {

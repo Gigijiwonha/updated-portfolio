@@ -84,6 +84,12 @@
 }
 
 /* Responsive Media Query */
+@media (min-width: 1025px){
+  .contactMe__form {
+    width: 50%;
+  }
+}
+
 @media (max-width: 1024px) {
   .contactSection {
     height: 100vh;

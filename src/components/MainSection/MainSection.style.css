@@ -154,8 +154,8 @@
 .custom-shape-divider-bottom-1729844857 svg {
   position: relative;
   display: block;
-  width: calc(160% + 1.3px);
-  height: 88px;
+  width: calc(180% + 1.3px);
+  height: 200px;
   transform: rotateY(180deg);
 }
 
@@ -187,6 +187,9 @@
 }
 
 @media (max-width: 768px) {
+  .mainSection {
+    height: 90vh;
+  }
   .mainSection__container h2 {
     font-size: 2.6rem;
   }
@@ -207,6 +210,10 @@
   .mainSection__container p::after {
     left: 10%;
     width: 80%;
+  }
+
+  .custom-shape-divider-bottom-1729844857 {
+    bottom: 10%;
   }
 }
 

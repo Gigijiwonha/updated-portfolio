@@ -230,6 +230,13 @@
 }
 
 /* Responsive Media Query */
+@media (min-width: 1025px){
+  .skillsSection p {
+    width: 60vw;
+    text-align: center;
+  }
+}
+
 @media (max-width: 1024px) {
   .skillsSection {
     padding: 120px 0;
@@ -314,7 +321,7 @@
   }
 
   .skillsSection {
-    padding: 100px 0;
+    padding: 50px 0;
   }
 
   .skillsSection p {
@@ -381,7 +388,8 @@
   }
 
   .ProjectsSection {
-    height: 210vh;
+    height: 200vh;
+    padding: 90px 0;
   }
 
   .projects__list {
@@ -393,8 +401,13 @@
 }
 
 @media (max-width: 480px) {
+
+  .skillsAndProjectsContainer {
+    height: 30vh;
+  }
+
   .skillsSection {
-    padding: 80px 0;
+    padding: 10px 0;
   }
 
   .skillsSection p {
@@ -470,7 +483,8 @@
   }
 
   .ProjectsSection {
-    height: 215vh;
+    height: 200vh;
+    padding: 70px 0;
   }
 
   .projects__list {
