@@ -82,7 +82,9 @@ const MainPage = () => {
         />
       </div>
       <div ref={aboutMeRef}>
-        <AboutMe />
+        <AboutMe 
+        scrollPosition={scrollPosition}
+        />
       </div>
       <div ref={skillsRef}>
         <SkillsProjects

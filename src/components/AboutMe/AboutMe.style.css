@@ -17,6 +17,7 @@
   top: 55%;
   left: 0;
   transform: translateY(-50%);
+  border-radius: 0 200px 200px 0;
   height: 30vh;
   width: 33vw;
   background-color: var(--colour-beige);
@@ -35,8 +36,10 @@
   justify-content: center;
   align-items: center;
   height: 90%;
-  width: 90%;
+  max-width: 1025px;
   gap: 1rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .aboutMe__content__left,
@@ -84,6 +87,14 @@
   position: relative;
   height: 60%; 
   z-index: 2;
+  opacity: 0;
+  transform: translateX(-100%) scale(0.9);
+  transition: all 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.isSliding {
+  transform: translateX(0) scale(1);
+  opacity: 1;
 }
 
 .aboutMe__content__right{

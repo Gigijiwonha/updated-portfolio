@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./AboutMe.style.css";
 import profileImage from "../../Assets/profileImage.png";
+import { get } from "react-scroll/modules/mixins/scroller";
 
-const AboutMe = () => {
+const AboutMe = ({ scrollPosition }) => {
   return (
     <div className='aboutMeSection'>
       <h2 className='aboutMe__title sectionTitle'>About Me</h2>
@@ -13,7 +14,9 @@ const AboutMe = () => {
             <h2>Jiwon Ha</h2>
           </div>
           <img
-            className='aboutMe__content__img'
+            className={`aboutMe__content__img ${
+              scrollPosition >= 570 && scrollPosition <= 1350 ? "isSliding" : ""
+            }`}
             src={profileImage}
             alt='profile image'
           />
