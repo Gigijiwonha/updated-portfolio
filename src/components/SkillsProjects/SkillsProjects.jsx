@@ -19,6 +19,8 @@ import ProjectCard from "./ProjectCard/ProjectCard";
 const Skills = ({ skillsRef, projectsRef }) => {
   const projects = [
     {
+      year:"2024",
+      projectType: "Group",
       url: "https://www.linkedin.com/feed/update/urn:li:activity:7249378011748151296/",
       git: "https://github.com/Gigijiwonha/spotify-demo",
       img: spotifyDemo,
@@ -27,6 +29,8 @@ const Skills = ({ skillsRef, projectsRef }) => {
       tools: ["JS", "React", "React Query", "Axios"],
     },
     {
+      year:"2024",
+      projectType: "Individual",
       url: "https://nutflix-demo-by-gigi.netlify.app",
       git: "https://github.com/Gigijiwonha/netflix-demo",
       img: netflixDemo,
@@ -35,6 +39,8 @@ const Skills = ({ skillsRef, projectsRef }) => {
       tools: ["JS", "React", "React Query", "Axios"],
     },
     {
+      year:"2024",
+      projectType: "Individual",
       url: "https://weatherapp-by-gigi.netlify.app/",
       git: "https://github.com/Gigijiwonha/updated-weather-app",
       img: weatherApp,
@@ -43,6 +49,8 @@ const Skills = ({ skillsRef, projectsRef }) => {
       tools: ["JS", "React", "React Query", "Axios"],
     },
     {
+      year:"2024",
+      projectType: "Individual",
       url: "https://go-to-list-by-gigi.netlify.app",
       git: "https://github.com/Gigijiwonha/go-to-list",
       img: goToList,
@@ -51,6 +59,8 @@ const Skills = ({ skillsRef, projectsRef }) => {
       tools: ["JS", "React", "Bootstrap", "Redux"],
     },
     {
+      year:"2024",
+      projectType: "Individual",
       url: "https://online-retail-store-by-gigi.netlify.app",
       git: "https://github.com/Gigijiwonha/online-retail-store",
       img: retailShop,
@@ -59,8 +69,10 @@ const Skills = ({ skillsRef, projectsRef }) => {
       tools: ["JS", "React", "JSON Server"],
     },
     {
+      year:"2023",
       //https://grocery-shopping-website-by-gigi.netlify.app
       // https://github.com/Gigijiwonha/online-grocery-store
+      projectType: "Individual",
       url: "",
       git: "",
       img: groceryShop,
@@ -177,9 +189,11 @@ const Skills = ({ skillsRef, projectsRef }) => {
         <p></p>
         <ul className='projects__list'>
           {projects.map((project, index) => (
-            <div className='projects__list__item'>
+            <div className='projects__list__items'>
               <ProjectCard
                 key={index}
+                projectType={project.projectType}
+                year={project.year}
                 url={project.url}
                 git={project.git}
                 img={project.img}

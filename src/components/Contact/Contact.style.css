@@ -86,7 +86,7 @@
 /* Responsive Media Query */
 @media (min-width: 1025px){
   .contactMe__form {
-    width: 50%;
+    max-width: 600px;
   }
 }
 

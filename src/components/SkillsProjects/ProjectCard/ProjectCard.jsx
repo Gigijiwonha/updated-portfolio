@@ -1,9 +1,18 @@
 import React, { useEffect, useState } from "react";
 import "./ProjectCard.style.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
-const ProjectCard = ({ url, img, git, title, description, tools }) => {
+const ProjectCard = ({
+  projectType,
+  year,
+  url,
+  img,
+  git,
+  title,
+  description,
+  tools,
+}) => {
   const [isActivated, setIsActivated] = useState(window.innerWidth <= 768);
 
   const buttonText =
@@ -23,39 +32,49 @@ const ProjectCard = ({ url, img, git, title, description, tools }) => {
   }, []);
 
   return (
-    <li className='projects__list-item'>
-      <a>
-        <img
-          src={img}
-          alt={title}
-        />
-       
-        <div className={`project__metadata ${isActivated ? "activated" : ""}`}>
-          <h3 className='project__title'>{title}</h3>
-          <p className='project__description'>{description}</p>
-          <ul className='project__tools'>
-            <li className='project__tool'>
-              {tools.map((tool, index) => `#${tool}`).join("  ")}
-            </li>
-          </ul>
-          <div className='project__btns'>
-            <a
-              href={url}
-              target='_blank'
-              className='project__btn'
-            >
-              {buttonText}
-            </a>
-            <a
-              href={git}
-              target='_blank'
-              className='project__btn'
-            >
-              GitHub
-            </a>
-          </div>
+    <li className='projects__card'>
+        <a
+          href={url}
+          target='_blank'
+          className='projects__img'
+        >
+          <img
+            src={img}
+            alt={title}
+          />
+        </a>
+      <div className={`project__content ${isActivated ? "activated" : ""}`}>
+        <div className='project__info'>
+          <span className='project__info-bg'>{projectType}</span>
+          <span>{year}</span>
         </div>
-      </a>
+        <h3 className='project__title'>{title}</h3>
+        <p className='project__description'>{description}</p>
+        <ul className='project__tools'>
+          <li className='project__tool'>
+            {tools.map((tool, index) => `#${tool}`).join("  ")}
+          </li>
+        </ul>
+        <div className='project__btns'>
+          <a
+            href={url}
+            target='_blank'
+            className='project__btn web'
+          >
+            {buttonText}
+          </a>
+          <a
+            href={git}
+            target='_blank'
+            className='project__btn git'
+          >
+            <FontAwesomeIcon
+              icon={faGithub}
+              className='gitIcon'
+            />
+          </a>
+        </div>
+      </div>
     </li>
   );
 };
