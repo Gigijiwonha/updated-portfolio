@@ -151,7 +151,7 @@
   }
 
   .aboutMe__content {
-    width: 96%;
+    max-width: 700px;
     gap: .5rem;
   }
 
@@ -166,7 +166,7 @@
   }
 
   .aboutMe__content__img{
-    max-height: 37vh; 
+    max-height: 30vh; 
   }
 
   .aboutMe__content__title{
@@ -192,17 +192,14 @@
   
   .aboutMe__content {
     flex-direction: column;
+    max-width: 465px;
+    margin-top: 30px;
   }
 
   .aboutMeSection::after{
     top: 36%;
     height: 18vh;
     width: 55vw;
-  }
-
-  .aboutMe__content {
-    width: 85%;
-    margin-top: 15px;
   }
 
   .aboutMe__content__name h1{
@@ -218,7 +215,7 @@
   }
 
   .aboutMe__content__right{
-    margin-bottom: 6rem;
+    margin-bottom: 80px;
   }
 }
 
@@ -232,12 +229,12 @@
   }
 
   .aboutMeSection::after{
-    top: 36%;
+    top: 40%;
     height: 18vh;
   }
 
   .aboutMe__content {
-    width: 85%;
+    max-width: 330px;
   }
 
   .aboutMe__content__name h1{
@@ -259,5 +256,9 @@
 
   .aboutMe__content__description{
     font-size: .8rem;
+  }
+
+  .aboutMe__content__right{
+    margin-bottom: auto;
   }
 }
