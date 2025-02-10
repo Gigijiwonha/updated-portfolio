@@ -90,80 +90,82 @@ const Skills = ({ skillsRef, projectsRef }) => {
         ref={skillsRef}
       >
         <h2 className='skills__title sectionTitle'>Skills</h2>
-        <p>
-          I primarily use HTML, CSS, and JavaScript to build websites.
-          Additionally, I have academic experience with Swift and Java from my
-          university coursework. I've utilised libraries like React, React
-          Query, Redux, Middleware Thunk, and Axios in various personal projects
-          and contributed to a team project as well.
-        </p>
-        <div className='skills__gridContainer'>
-          <div className='skills__language girdBox'>
-            <h3>💻 Language</h3>
-            <div className='gridBox__item'>
-              <h4>Proficient In</h4>
-              <ul className='gridBox__item__list--icon'>
-                <li>
-                  <FontAwesomeIcon
-                    icon={faHtml5}
-                    className='liIcon'
-                  />
-                  HTML 5
-                </li>
-                <li>
-                  <FontAwesomeIcon
-                    icon={faCss3Alt}
-                    className='liIcon'
-                  />
-                  CSS 6
-                </li>
-                <li>
-                  <FontAwesomeIcon
-                    icon={faJs}
-                    className='liIcon'
-                  />
-                  Java Script
-                </li>
+        <div className='skills__container'>
+          <p>
+            I primarily use HTML, CSS, and JavaScript to build websites.
+            Additionally, I have academic experience with Swift and Java from my
+            university coursework. I've utilised libraries like React, React
+            Query, Redux, Middleware Thunk, and Axios in various personal
+            projects and contributed to a team project as well.
+          </p>
+          <div className='skills__gridContainer'>
+            <div className='skills__language girdBox'>
+              <h3>💻 Language</h3>
+              <div className='gridBox__item'>
+                <h4>Proficient In</h4>
+                <ul className='gridBox__item__list--icon'>
+                  <li>
+                    <FontAwesomeIcon
+                      icon={faHtml5}
+                      className='liIcon'
+                    />
+                    HTML 5
+                  </li>
+                  <li>
+                    <FontAwesomeIcon
+                      icon={faCss3Alt}
+                      className='liIcon'
+                    />
+                    CSS 6
+                  </li>
+                  <li>
+                    <FontAwesomeIcon
+                      icon={faJs}
+                      className='liIcon'
+                    />
+                    Java Script
+                  </li>
+                </ul>
+              </div>
+              <div className='gridBox__item'>
+                <h4>Familiar With</h4>
+                <ul className='gridBox__item__list--icon'>
+                  <li>
+                    <FontAwesomeIcon
+                      icon={faSwift}
+                      className='liIcon'
+                    />
+                    Swift
+                  </li>
+                  <li>
+                    <FontAwesomeIcon
+                      icon={faJava}
+                      className='liIcon'
+                    />
+                    Java
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className='skills__library girdBox'>
+              <h3>📚 Library</h3>
+              <ul className='gridBox__item__list--colomn'>
+                <li>React</li>
+                <li>React Query</li>
+                <li>Redux</li>
+                <li>Midleware Thunk</li>
+                <li>Axios</li>
               </ul>
             </div>
-            <div className='gridBox__item'>
-              <h4>Familiar With</h4>
-              <ul className='gridBox__item__list--icon'>
-                <li>
-                  <FontAwesomeIcon
-                    icon={faSwift}
-                    className='liIcon'
-                  />
-                  Swift
-                </li>
-                <li>
-                  <FontAwesomeIcon
-                    icon={faJava}
-                    className='liIcon'
-                  />
-                  Java
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className='skills__library girdBox'>
-            <h3>📚 Library</h3>
-            <ul className='gridBox__item__list--colomn'>
-              <li>React</li>
-              <li>React Query</li>
-              <li>Redux</li>
-              <li>Midleware Thunk</li>
-              <li>Axios</li>
-            </ul>
-          </div>
-          <div className='skills__tool girdBox'>
-            <h3>⚙️ Tools</h3>
+            <div className='skills__tool girdBox'>
+              <h3>⚙️ Tools</h3>
 
-            <ul className='gridBox__item__list'>
-              <li>VS Code</li>
-              <li>Git</li>
-              <li>Figma</li>
-            </ul>
+              <ul className='gridBox__item__list'>
+                <li>VS Code</li>
+                <li>Git</li>
+                <li>Figma</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
