@@ -27,6 +27,11 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+}
+
+
 body {
   overscroll-behavior: none;
   background-color: var(--colour-beige);

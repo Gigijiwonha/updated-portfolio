@@ -1,7 +1,5 @@
 .contactSection {
-  height: 120vh;
-  box-sizing: border-box;
-  padding: 100px 0;
+  padding: 130px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -16,7 +14,7 @@
 }
 
 .contactMe__form {
-  width: 60%;
+  width: 500px;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -30,6 +28,7 @@
   padding: 30px;
   border-radius: 10px;
   box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.4);
+  margin: 60px auto;
 }
 
 .contactMe__label {
@@ -84,23 +83,18 @@
 }
 
 /* Responsive Media Query */
-@media (min-width: 1025px){
+@media (min-width: 1025px) {
   .contactMe__form {
-    max-width: 600px;
+    width: 600px;
   }
 }
 
 @media (max-width: 1024px) {
-  .contactSection {
-    height: 100vh;
-    margin-top: 50px;
-  }
-
   .contactMe__form {
     gap: 15px;
     padding: 25px;
   }
-  
+
   .contactMe__label {
     font-size: 14px;
   }
@@ -110,13 +104,13 @@
   }
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
   .contactMe__form {
-    width: 70%;
+    width: 390px;
     gap: 10px;
     padding: 20px;
   }
-  
+
   .contactMe__label {
     font-size: 13px;
   }
@@ -126,13 +120,13 @@
   }
 }
 
-@media (max-width: 480px){
+@media (max-width: 480px) {
   .contactMe__form {
-    width: 80%;
+    width: 300px;
     gap: 7px;
     padding: 12px;
   }
-  
+
   .contactMe__label {
     font-size: 12px;
   }

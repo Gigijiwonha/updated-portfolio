@@ -1,8 +1,7 @@
 .aboutMeSection{
   background-color: var(--colour-red);
-  height: 110vh;
   box-sizing: border-box;
-  padding: 100px 0;
+  padding: 130px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -14,11 +13,11 @@
 .aboutMeSection::after{
   content: '';
   position: absolute;
-  top: 55%;
+  top: 53%;
   left: 0;
   transform: translateY(-50%);
   border-radius: 0 200px 200px 0;
-  height: 30vh;
+  height: 200px;
   width: 33vw;
   background-color: var(--colour-beige);
   z-index: 0;
@@ -38,8 +37,8 @@
   height: 90%;
   max-width: 1025px;
   gap: 1rem;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 130px auto;
+  margin-bottom: 160px;
 }
 
 .aboutMe__content__left,
@@ -122,10 +121,11 @@
   text-align: center;
 }
 
+
 /* Responsive Media Query */
 @media (min-width: 1025px) {
   .aboutMeSection::after{
-    height: 25vh;
+    height: 200px;
     width: 38vw;
   }
 
@@ -145,18 +145,20 @@
 
 @media (max-width: 1024px) {
   .aboutMeSection::after{
-    top: 55%;
-  height: 26vh;
+    top: 52%;
+    height: 200px;
     width: 36vw;
   }
 
   .aboutMe__content {
-    max-width: 700px;
+    max-width: 720px;
     gap: .5rem;
+    margin: 140px auto;
+    margin-bottom: 210px;
   }
 
   .aboutMe__content__name h1{
-    font-size: 3.5rem;
+    font-size: 3.3rem;
     font-weight: 800;
     text-shadow: 0 4px 5px rgba(0, 0, 0, 0.25);
   }
@@ -166,7 +168,8 @@
   }
 
   .aboutMe__content__img{
-    max-height: 30vh; 
+    height: auto;
+    width: 68%;
   }
 
   .aboutMe__content__title{
@@ -186,19 +189,15 @@
 }
 
 @media (max-width: 768px) {
-  .aboutMeSection{
-    height: 110vh;
-  }
-  
   .aboutMe__content {
     flex-direction: column;
     max-width: 465px;
-    margin-top: 30px;
+    margin: 40px auto;
   }
 
   .aboutMeSection::after{
-    top: 36%;
-    height: 18vh;
+    top: 37%;
+    height: 140px;
     width: 55vw;
   }
 
@@ -207,7 +206,8 @@
   }
 
   .aboutMe__content__img{
-    height: 30vh; 
+    height: auto;
+    width: 50%; 
   }
 
   .aboutMe__content__title{
@@ -215,22 +215,18 @@
   }
 
   .aboutMe__content__right{
-    margin-bottom: 80px;
+    margin: 40px auto;
   }
 }
 
 @media (max-width: 480px) {
-  .aboutMeSection{
-    height: 100vh;
-  }
-
   .aboutMe__title{
     margin-bottom: 2rem;
   }
 
   .aboutMeSection::after{
-    top: 40%;
-    height: 18vh;
+    top: 39%;
+    height: 120px;
   }
 
   .aboutMe__content {
@@ -238,7 +234,7 @@
   }
 
   .aboutMe__content__name h1{
-    font-size: 2.8rem;
+    font-size: 2.7rem;
     margin-left: 10px;
   }
 
@@ -247,7 +243,8 @@
   }
 
   .aboutMe__content__img{
-    max-height: 30vh; 
+    height: auto;
+    width: 60%; 
   }
 
   .aboutMe__content__title{

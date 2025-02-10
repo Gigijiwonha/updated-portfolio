@@ -157,13 +157,14 @@
   position: relative;
   display: block;
   width: calc(180% + 1.3px);
-  height: 200px;
+  max-height: 200px;
   transform: rotateY(180deg);
 }
 
 .custom-shape-divider-bottom-1729844857 .shape-fill {
   fill: var(--colour-red);
 }
+
 
 /* Responsive Media Query */
 @media (max-width: 1024px) {
@@ -204,6 +205,15 @@
     width: 70vw;
   }
 
+  @keyframes loading {
+    from {
+      width: 20%;
+    }
+    to {
+      width: 80%;
+    }
+  }
+
   .mainSection__container p::before {
     left: 10%;
     width: 80%;
@@ -216,6 +226,10 @@
 
   .custom-shape-divider-bottom-1729844857 {
     bottom: 10%;
+  }
+
+  .custom-shape-divider-bottom-1729844857 svg {
+    height: 100px;
   }
 }
 
