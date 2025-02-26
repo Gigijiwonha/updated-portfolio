@@ -121,21 +121,21 @@ const Skills = ({ skillsRef, projectsRef }) => {
                       icon={faHtml5}
                       className='liIcon'
                     />
-                    HTML 5
+                    HTML5
                   </li>
                   <li>
                     <FontAwesomeIcon
                       icon={faCss3Alt}
                       className='liIcon'
                     />
-                    CSS 6
+                    CSS
                   </li>
                   <li>
                     <FontAwesomeIcon
                       icon={faJs}
                       className='liIcon'
                     />
-                    Java Script
+                    JavaScript/ TypeScript
                   </li>
                 </ul>
               </div>
